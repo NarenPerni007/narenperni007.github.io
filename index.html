@@ -259,11 +259,197 @@ section{max-width:1180px}.sec-head h2{font-size:clamp(1.8rem,3vw,2.45rem)}.sec-h
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 body.motion-off *,body.motion-off *:before,body.motion-off *:after{animation:none!important;transition:none!important}
 
+
+/* V3: cinematic, continuously running DevOps command center */
+#matrix-rain{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.36}
+body{background:#030a10}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse at 80% 25%,rgba(0,173,200,.14),transparent 48%),repeating-linear-gradient(0deg,transparent 0 42px,rgba(49,206,213,.035) 43px),repeating-linear-gradient(90deg,transparent 0 42px,rgba(49,206,213,.035) 43px)}
+nav,section,footer{position:relative;z-index:2}header{isolation:isolate;min-height:100vh;background:linear-gradient(90deg,rgba(2,9,16,.96) 0%,rgba(3,12,21,.84) 47%,rgba(2,12,21,.6) 100%)}
+header .ambient{opacity:.26!important;filter:none!important;mix-blend-mode:screen}header .ambient pre{font-size:13px!important;color:#31e5a0!important}
+.hero{position:relative;z-index:3;max-width:1230px;gap:40px}.hero-copy{position:relative;z-index:4}.hero h1{color:#f6fbff;text-shadow:0 2px 28px rgba(0,0,0,.65)}.hero .sub{color:#c3d4e4;text-shadow:0 2px 12px #030b12}
+.terminal{border-color:rgba(51,241,190,.36);box-shadow:0 0 35px rgba(0,237,196,.08),0 20px 65px rgba(0,0,0,.55);background:rgba(2,13,19,.91)}
+.terminal-head{background:rgba(22,77,77,.28);color:#b4ebdf}.terminal-body{height:252px;min-height:252px;overflow:hidden;font:12px/1.62 Consolas,'Courier New',monospace;padding:13px 15px;color:#a7d8e3;mask-image:linear-gradient(transparent,#000 10%,#000 92%,transparent)}
+.term-line{white-space:pre-wrap;overflow-wrap:anywhere;animation:termEnter .28s ease-out}.term-line.cmd{color:#67f7c4}.term-line.info{color:#a5d7e6}.term-line.good{color:#66e8a6}.term-line.warn{color:#f5ce7d}.term-line .stamp{color:#60899c;margin-right:8px}.term-line .shell{color:#48d2f5}
+@keyframes termEnter{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.ops-strip{display:flex;gap:9px;flex-wrap:wrap;margin:10px 0 14px}.ops-strip span{font:10px Consolas,monospace;color:#b1d8d8;border:1px solid rgba(79,212,198,.25);background:rgba(6,42,43,.68);padding:7px 10px;border-radius:6px}.ops-strip b{color:#5bf5b5}
+.cyber-side{position:absolute;right:0;top:18%;width:42%;height:67%;pointer-events:none;z-index:1;opacity:.64;overflow:hidden}.cyber-side .feed{font:11px/1.8 Consolas,monospace;color:#39d6b7;white-space:pre;animation:floatfeed 24s linear infinite;text-shadow:0 0 12px #17c9b0}.cyber-side:before{content:'NETWORK OPERATIONS // TELEMETRY';display:block;color:#5ef5ca;letter-spacing:3px;font:11px Consolas,monospace;border-bottom:1px solid #1d665f;padding-bottom:12px;margin-bottom:12px}
+@keyframes floatfeed{from{transform:translateY(0)}to{transform:translateY(-32%)}}
+.hero-art{z-index:3}.portrait-ring{box-shadow:0 0 48px rgba(12,222,217,.24)}
+.cyber-mark{position:absolute;bottom:35px;right:4%;font:10px Consolas,monospace;color:#4bd7c1;letter-spacing:2px;opacity:.7}
+.motion-off #matrix-rain,.motion-off .cyber-side .feed{animation:none!important;opacity:.08!important}
+@media(max-width:850px){.cyber-side{width:100%;top:8%;opacity:.22}.terminal-body{height:210px;min-height:210px}.hero{gap:16px}header{background:rgba(2,9,16,.87)}}
+@media(prefers-reduced-motion:reduce){#matrix-rain{display:none}.cyber-side .feed,.term-line{animation:none!important}}
+
+/* V4 · Cinematic identity terminal and editorial engineering portfolio */
+:root{--accent:#60e6e2;--accent2:#8bcaff;--muted:#a9bacb}
+body{font-family:Inter,'Segoe UI',Arial,sans-serif}
+#matrix-rain{opacity:.57;filter:drop-shadow(0 0 5px rgba(30,255,175,.25))}
+header{background:linear-gradient(90deg,rgba(2,9,16,.91) 0%,rgba(3,12,21,.78) 49%,rgba(2,12,21,.46) 100%)}
+header .ambient{opacity:.40!important}
+.cyber-side{top:13%;right:1%;height:78%;width:44%;opacity:.83;mask-image:linear-gradient(to bottom,transparent,#000 10%,#000 83%,transparent);background:linear-gradient(90deg,transparent,rgba(0,20,23,.16));border-left:1px solid rgba(64,231,185,.10);padding-left:16px}
+.cyber-side:before{content:'NAREN@CLOUD-OPS  /  IDENTITY STREAM';font-weight:700;letter-spacing:2px;color:#a2ffe0}
+.cyber-side .feed{font-size:12px;line-height:1.8;color:#79efc9;text-shadow:0 0 10px rgba(38,240,163,.48);animation:floatfeed 36s linear infinite}
+@keyframes floatfeed{from{transform:translateY(0)}to{transform:translateY(-18%)}}
+section{position:relative}section:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 100% 0,rgba(0,160,165,.045),transparent 60%)}
+.sec-head h2{font-weight:800;letter-spacing:-1.5px}
+.skills-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.skill-cat{position:relative;overflow:hidden;border:1px solid rgba(99,192,209,.19)!important;background:linear-gradient(145deg,rgba(17,36,49,.93),rgba(6,17,28,.94))!important;border-radius:15px!important;padding:26px!important;transition:transform .25s,border-color .25s,box-shadow .25s}
+.skill-cat:hover{transform:translateY(-5px);border-color:rgba(95,231,220,.58)!important;box-shadow:0 16px 45px rgba(0,0,0,.25),0 0 22px rgba(0,220,188,.07)}
+.skill-cat:before{content:'';position:absolute;top:0;left:24px;right:24px;height:2px;background:linear-gradient(90deg,#4fe4c3,transparent);opacity:.9}
+.skill-cat h3{font:700 1.04rem/1.4 Inter,'Segoe UI',sans-serif;color:#f3fbff;margin:0 0 20px;letter-spacing:-.2px}
+.skill-cat h3::after{content:'';display:block;margin-top:13px;width:32px;height:2px;background:#54dec4}
+.skill-cat .tags{gap:9px}
+.skill-cat .tag2{font:500 .8rem/1.35 Inter,'Segoe UI',sans-serif;background:rgba(95,165,190,.09);border:1px solid rgba(123,192,209,.15);color:#d1e5ed;border-radius:6px;padding:8px 11px}
+#certifications .two-col{grid-template-columns:1.25fr 1fr;gap:22px}
+#certifications .two-col>.card{padding:30px!important;border-radius:16px;background:linear-gradient(140deg,rgba(16,35,49,.96),rgba(7,20,31,.95));border:1px solid rgba(111,190,207,.19)}
+#certifications .cert{align-items:center;padding:17px 0;border-bottom:1px solid rgba(135,185,203,.12);margin:0;gap:18px}
+#certifications .cert:last-child{border-bottom:0}
+#certifications .cert .badge{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;font-size:21px;background:rgba(49,182,195,.1);border:1px solid rgba(75,206,203,.23);border-radius:12px}
+#certifications .cert b{font:700 .98rem/1.5 Inter,'Segoe UI',sans-serif;color:#eef8ff}
+#certifications .cert small,#certifications .edu-item small{display:block;color:#a9c0d1;font-size:.82rem;margin-top:5px}
+#certifications .edu-item{padding:19px 0;margin:0;border-bottom:1px solid rgba(135,185,203,.12)}
+#certifications .edu-item:last-child{border:0}
+#certifications .edu-item b{font:700 1rem/1.5 Inter,'Segoe UI',sans-serif;color:#f0f9ff}
+@media(max-width:1050px){.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.cyber-side{opacity:.28;width:100%;right:0;top:9%;padding-left:8px}.cyber-side .feed{font-size:10px}header{background:linear-gradient(90deg,rgba(2,9,16,.89),rgba(2,9,16,.72))}}
+@media(max-width:680px){.skills-grid,#certifications .two-col{grid-template-columns:1fr}.skill-cat{padding:23px!important}#matrix-rain{opacity:.36}.cyber-side{opacity:.18}.hero-copy{background:rgba(2,9,16,.15)}}
+@media(prefers-reduced-motion:reduce){.cyber-side .feed{animation:none!important}}
+
+
+/* V5  -  cinematic signal layers and interactive engineering dossiers */
+#ops-cinema{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.76}
+.cinema-vignette{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 52% 44%,transparent 19%,rgba(1,7,13,.28) 72%,rgba(1,7,13,.55) 100%)}
+#matrix-rain{opacity:.53;filter:drop-shadow(0 0 7px rgba(29,255,168,.28))}
+body{background:#02070c}
+body:before{background:radial-gradient(ellipse at 80% 18%,rgba(2,232,176,.10),transparent 53%),linear-gradient(120deg,rgba(0,0,0,.12),transparent 60%)}
+header:after{background:linear-gradient(90deg,rgba(2,8,14,.96) 0%,rgba(2,8,14,.80) 43%,rgba(2,8,14,.37) 100%)}
+section{position:relative;z-index:3}
+.sec-head{margin-bottom:30px}.sec-head h2{font-size:clamp(2rem,4.2vw,3.35rem);font-weight:800;letter-spacing:-1.7px}.accent-dot{color:#61f5c1}.section-subtitle{color:#b4c9d6;max-width:690px;font-size:.98rem;margin-top:12px}
+.skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.skill-cat{padding:27px!important;background:linear-gradient(130deg,rgba(8,23,32,.94),rgba(3,14,24,.92))!important;border:1px solid rgba(81,214,181,.24)!important;border-radius:5px!important;box-shadow:0 12px 35px rgba(0,0,0,.24)!important}
+.skill-cat:before{left:0;right:auto;top:0;width:3px;height:100%;background:linear-gradient(#66f7c8,transparent)}
+.skill-cat h3{font-size:1.03rem!important;letter-spacing:.2px}.skill-cat h3:after{display:none}
+.skill-cat .tags{display:flex;flex-wrap:wrap;gap:10px}
+.skill-trigger{appearance:none;cursor:pointer;text-align:left;display:inline-flex;align-items:center;justify-content:space-between;gap:12px;border-radius:5px!important;background:rgba(9,40,47,.72)!important;border:1px solid rgba(89,210,194,.25)!important;color:#e1f8f5!important;padding:11px 13px!important;font:600 .82rem 'Segoe UI',sans-serif!important;transition:transform .24s,background .24s,box-shadow .24s,border-color .24s}
+.skill-trigger:hover,.skill-trigger:focus-visible{transform:translateY(-3px);border-color:#6cf8d3!important;background:rgba(27,102,96,.35)!important;box-shadow:0 0 22px rgba(65,255,188,.13);outline:none}.tag-arrow{font-size:.78rem;color:#60f2c0}
+.proj-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.proj{border-radius:6px!important;background:linear-gradient(145deg,rgba(8,25,35,.96),rgba(3,13,24,.95))!important;border:1px solid rgba(76,186,183,.26)!important;box-shadow:0 18px 40px rgba(0,0,0,.22)!important;overflow:hidden;position:relative}
+.proj:before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#4ff5c3,transparent);transform:scaleX(.1);transform-origin:left;transition:transform .35s}
+.proj:hover:before,.proj:has(details[open]):before{transform:scaleX(1)}
+.proj:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 25px rgba(39,215,174,.09)!important}
+.proj h3{font-size:1.14rem;letter-spacing:-.35px}.proj p{color:#b7d0d9}
+.project-dossier{margin-top:23px;border-top:1px solid rgba(100,222,196,.21);padding-top:17px}.project-dossier summary{list-style:none;cursor:pointer;color:#70f2c7;font:700 .82rem 'Segoe UI',sans-serif;display:flex;justify-content:space-between;align-items:center;letter-spacing:.25px}.project-dossier summary::-webkit-details-marker{display:none}.project-dossier summary span{transition:transform .25s}.project-dossier[open] summary span{transform:rotate(90deg)}
+.dossier-inner{animation:dossierEnter .36s ease-out;padding:17px 0 2px}.dossier-label{font:10px Consolas,monospace;letter-spacing:1.3px;color:#79a9a9}.dossier-inner ol{padding:13px 0 15px 21px;display:grid;gap:12px}.dossier-inner li{color:#d4e8eb;font-size:.86rem;line-height:1.55;padding-left:5px}.dossier-inner li::marker{color:#66eebf}.dossier-inner a{font-size:.82rem;font-weight:700}
+@keyframes dossierEnter{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.skill-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:22px}.skill-modal.open{display:flex}.skill-modal-backdrop{position:absolute;inset:0;background:rgba(0,7,13,.83);backdrop-filter:blur(13px)}.skill-dialog{position:relative;width:min(630px,100%);max-height:min(85vh,760px);overflow:auto;border:1px solid rgba(102,255,199,.52);background:linear-gradient(145deg,#0b2530,#04111c 70%);box-shadow:0 0 0 1px rgba(39,196,153,.12),0 35px 100px rgba(0,0,0,.8),0 0 90px rgba(0,229,159,.12);animation:modalIn .3s ease-out}.dialog-top{padding:13px 20px;border-bottom:1px solid rgba(95,231,190,.22);display:flex;align-items:center;justify-content:space-between;color:#80cdb7;font:10px Consolas,monospace;letter-spacing:1.2px}.dialog-close{background:transparent;border:1px solid rgba(118,217,194,.4);color:#e5fff6;font-size:17px;cursor:pointer;width:31px;height:31px}.dialog-body{padding:35px clamp(22px,5vw,43px)}.dialog-kicker{font:12px Consolas,monospace;color:#66f4b7}.dialog-body h2{font-size:clamp(2.2rem,6vw,3.7rem);letter-spacing:-1.5px;margin:7px 0}.dialog-lead{color:#b6d1d8;margin-bottom:28px}.dialog-body ol{list-style:none;counter-reset:cap;display:grid;gap:13px}.dialog-body li{counter-increment:cap;display:flex;gap:16px;align-items:flex-start;color:#e2f3f2;line-height:1.6;font-size:.96rem;padding:14px;background:rgba(41,115,107,.11);border:1px solid rgba(90,221,188,.13)}.dialog-body li:before{content:'0' counter(cap);font:700 13px Consolas,monospace;color:#63f2bc;min-width:26px;margin-top:3px}.dialog-footer{border-top:1px solid rgba(103,232,193,.2);margin-top:28px;padding-top:17px;color:#82baae;font:10px Consolas,monospace;letter-spacing:1px;display:flex;align-items:center;gap:10px}.pulse-led{width:7px;height:7px;background:#56f4a8;border-radius:50%;box-shadow:0 0 12px #56f4a8;animation:blink 1.7s infinite}.dialog-index{margin-left:auto}
+@keyframes modalIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+body.modal-open{overflow:hidden}
+.motion-off #ops-cinema{opacity:.12}
+@media(max-width:760px){.skills-grid,.proj-grid{grid-template-columns:1fr}.skill-cat{padding:22px!important}#ops-cinema{opacity:.46}.cinema-vignette{background:rgba(1,7,12,.22)}.skill-dialog{max-height:88vh}.dialog-body{padding:25px 20px}.skill-trigger{font-size:.78rem!important}}
+@media(prefers-reduced-motion:reduce){#ops-cinema{display:none}.skill-dialog,.dossier-inner{animation:none}}
+
+/* V6  -  cinematic engineering interface: animated HUD, high contrast, readable content */
+:root{--accent:#48eaff;--green:#55ffb7}
+.logo{font-weight:850!important;font-size:1.35rem!important;letter-spacing:-.7px!important;text-transform:none!important;color:#f7fdff!important}.logo span{color:#66f9ca!important}
+#matrix-rain{opacity:.68!important;filter:drop-shadow(0 0 9px rgba(38,255,183,.35))}
+#ops-cinema{opacity:.96!important;mix-blend-mode:screen}
+.cinema-vignette{background:radial-gradient(ellipse at 54% 38%,rgba(1,9,17,.08) 0%,rgba(1,8,14,.18) 58%,rgba(1,7,13,.38) 100%)!important}
+body:before{content:'';position:fixed;inset:-40%;z-index:0;pointer-events:none;background:conic-gradient(from 30deg at 65% 45%,transparent 0deg,rgba(17,220,178,.075) 24deg,transparent 50deg,rgba(15,128,211,.08) 95deg,transparent 140deg,rgba(27,231,169,.07) 180deg,transparent 235deg,rgba(31,137,210,.08) 300deg,transparent 340deg);animation:ambientRotate 55s linear infinite}
+@keyframes ambientRotate{to{transform:rotate(360deg)}}
+header{background:linear-gradient(90deg,rgba(2,10,18,.91),rgba(2,10,18,.58) 60%,rgba(2,10,18,.42))!important}
+section{position:relative;z-index:2}
+.mission-profile{border:1px solid rgba(89,240,203,.34);background:linear-gradient(120deg,rgba(4,27,39,.9),rgba(5,20,35,.78));padding:17px 19px;margin:20px 0 25px;box-shadow:inset 0 1px rgba(158,255,235,.08),0 20px 45px rgba(0,0,0,.2);position:relative;overflow:hidden}
+.mission-profile:after{content:'';position:absolute;top:0;left:-45%;width:30%;height:100%;transform:skewX(-24deg);background:linear-gradient(90deg,transparent,rgba(80,255,204,.085),transparent);animation:profileSweep 8s ease-in-out infinite}
+@keyframes profileSweep{0%,30%{left:-45%}85%,100%{left:135%}}
+.mission-profile-top{display:flex;justify-content:space-between;gap:8px;color:#80dfd0;font:700 10px Consolas,monospace;letter-spacing:1.4px;padding-bottom:12px;border-bottom:1px solid rgba(88,220,200,.18)}
+.live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#5affac;box-shadow:0 0 13px #5affac;margin-right:5px;animation:blink 1.8s infinite}
+.mission-profile-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding-top:15px}
+.mission-profile-grid>div{display:flex;flex-direction:column;gap:7px;min-width:0}.mission-profile-grid small{color:#66bcae;font:700 9px Consolas,monospace;letter-spacing:.8px}.mission-profile-grid strong{color:#f3ffff;font-size:12px;line-height:1.4}.mission-profile-grid span{color:#b4cdd2;font-size:11px;line-height:1.5}
+.skill-cat{background:linear-gradient(145deg,rgba(9,29,43,.94),rgba(5,17,30,.95))!important;box-shadow:inset 0 1px rgba(106,235,214,.08)}
+.skill-trigger{min-height:42px}.skill-trigger:active{transform:scale(.97)}
+.project-dossier summary:hover{color:#dcfff3}
+.proj{transition:transform .3s,border-color .3s,box-shadow .3s}.proj:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(0,0,0,.33),0 0 30px rgba(40,225,184,.08)}
+.skill-modal.open .skill-dialog{animation:modalIn .34s cubic-bezier(.16,1,.3,1)}
+@media(max-width:760px){.mission-profile-grid{grid-template-columns:1fr}.mission-profile-grid>div{padding:5px 0}.mission-profile-top{flex-wrap:wrap}#ops-cinema{opacity:.6!important}#matrix-rain{opacity:.42!important}}
+@media(prefers-reduced-motion:reduce){body:before,.mission-profile:after{animation:none}}
+
+
+/* V7 · Recruiter-grade readability over cinematic background */
+:root{--text:#f7fbff;--muted:#c6d6e6;--border:rgba(135,205,227,.32)}
+body{font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.hero p.sub,.about-grid p,.card p,.timeline li,.proj p,.contact-panel p{color:#e0ecf7!important;font-size:1rem!important;line-height:1.85!important}
+.sec-head .section-subtitle,.section-subtitle,.when,.stat .l,.project-meta,.skill-cat p{color:#c5d9e9!important}
+.nav-links a,.co,.tag2,.dialog-lead{color:#e3f2fc!important}
+.timeline li{padding-bottom:7px}
+.t-item,.card,.proj,.skill-cat{background-color:rgba(9,22,35,.93)!important;border-color:rgba(127,199,225,.30)!important}
+.t-item .role,.proj h3,.skill-cat h3{color:#fff!important}
+.skill-trigger{font-size:.88rem!important;font-weight:650!important}
+.skill-dialog{color:#f5fbff!important}
+#skill-points li{font-size:1rem!important;line-height:1.8!important;color:#eaf6ff!important}
+.dialog-footer{color:#a8c8d7!important}
+@media(max-width:720px){body{font-size:15.5px}.hero p.sub,.about-grid p,.card p,.timeline li,.proj p{font-size:.97rem!important}}
 </style>
 
-</head>
+
+<style id="final-legibility">
+:root{--text:#f5fbff;--muted:#d0e0ed}
+body{font-size:16.5px;line-height:1.7}
+.hero p.sub,.about-grid p,.card p,.timeline li,.proj p,.contact-panel p{color:#eef7ff!important}
+.timeline li{font-size:1.02rem!important;line-height:1.76!important;padding-bottom:12px!important}
+.experience-card{padding:28px 32px!important;background:rgba(7,19,31,.95)!important;border:1px solid rgba(104,207,222,.35)!important;border-radius:17px!important}
+.experience-card ul{margin-top:16px!important}
+.experience-card .role{font-size:1.32rem!important;letter-spacing:-.02em}
+.experience-card .co{color:#a9f4de!important;font-weight:750}
+.experience-card .when{color:#c7deeb!important}
+.section-subtitle{color:#d5e6f3!important;font-size:1.04rem!important}
+.skill-dialog,#skill-points li{color:#eef9ff!important}
+#skill-points li{font-size:1.03rem!important;line-height:1.8!important}
+@media(max-width:700px){.experience-card{padding:21px 19px!important}.timeline li{font-size:.96rem!important}}
+</style>
+
+<style id="identity-final-polish">
+.hero-identity{display:block!important}
+.hero-name-pill{font-size:clamp(12px,1.2vw,15px)!important;font-weight:800!important;letter-spacing:.09em;color:#e7fbff!important;border-color:rgba(108,238,212,.6)!important}
+.hero-role-pill{font-size:clamp(11px,1vw,13px)!important;line-height:1.7!important;letter-spacing:.035em;color:#e7fbff!important}
+.hero-role-pill strong{font-size:.93em;color:#a2f5d4!important}
+@media(max-width:600px){.hero-name-pill{left:0!important;top:4%!important}.hero-role-pill{right:0!important;bottom:10%!important}}
+
+.hero-identity{display:flex;align-items:center;gap:22px;margin-bottom:17px}
+.identity-avatar{width:116px;height:116px;flex:none;object-fit:cover;object-position:center 28%;border-radius:22px;border:2px solid rgba(104,244,211,.75);box-shadow:0 0 0 6px rgba(28,178,176,.11),0 14px 36px rgba(0,0,0,.42);background:#12232c}
+.identity-copy{min-width:0}
+.identity-copy h1{margin:10px 0 5px;line-height:1.15}
+.identity-meta{font-size:.73rem;letter-spacing:.12em;font-weight:700;color:#b8eadf;line-height:1.7;margin-top:9px}
+.hero-copy .sub{max-width:750px;line-height:1.82!important;font-size:1.08rem!important;color:#eef8ff!important}
+.nav-inner .logo{white-space:nowrap;font-size:clamp(.96rem,1.5vw,1.25rem);letter-spacing:-.03em}
+@media(max-width:700px){
+.hero-identity{align-items:flex-start;gap:14px}
+.identity-avatar{width:78px;height:78px;border-radius:16px}
+.identity-copy h1{font-size:clamp(1.65rem,6.5vw,2.35rem)!important}
+.identity-meta{font-size:.62rem;letter-spacing:.07em}
+.hero-copy .sub{font-size:1rem!important}
+}
+@media(max-width:390px){.identity-avatar{width:62px;height:62px}.hero-identity{gap:10px}.nav-inner .logo{font-size:.9rem}}
+</style>
+<style id="portrait-showcase-final">
+/* The portrait is the single visual anchor of the introduction. */
+.hero{grid-template-columns:minmax(0,1.22fr) minmax(310px,.78fr);gap:clamp(28px,4vw,68px);align-items:center}
+.portrait-showcase{min-height:540px;position:relative;gap:0;isolation:isolate}
+.portrait-showcase .portrait-aura{position:absolute;width:440px;height:440px;top:1%;left:50%;transform:translateX(-50%);background:radial-gradient(circle,rgba(34,191,181,.17) 0%,rgba(40,127,197,.11) 35%,transparent 72%);filter:blur(8px);z-index:-1;animation:portrait-breathe 6s ease-in-out infinite alternate}
+.portrait-showcase .portrait-ring{width:clamp(260px,28vw,385px);height:clamp(260px,28vw,385px);padding:6px;border-radius:28px;background:linear-gradient(135deg,rgba(132,242,221,.94),rgba(63,141,208,.5),rgba(126,243,206,.7));box-shadow:0 0 0 10px rgba(66,205,198,.05),0 22px 65px rgba(0,0,0,.38),0 0 75px rgba(54,191,199,.14);transform:rotate(-1deg);transition:transform .35s ease,box-shadow .35s ease}
+.portrait-showcase .portrait-ring:hover{transform:rotate(0deg) translateY(-5px);box-shadow:0 25px 75px rgba(0,0,0,.4),0 0 90px rgba(70,217,205,.22)}
+.portrait-showcase .portrait-inner{border-radius:23px;background:#132533}
+.portrait-showcase .portrait-inner img{object-position:center 24%}
+.portrait-identity{position:relative;z-index:2;width:min(100%,395px);margin-top:-16px;padding:20px 20px 18px;border:1px solid rgba(116,222,208,.37);border-radius:15px;background:linear-gradient(120deg,rgba(10,28,40,.97),rgba(8,21,34,.96));box-shadow:0 18px 45px rgba(0,0,0,.4);display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+.portrait-label{font:700 10px Consolas,monospace;letter-spacing:.21em;color:#91f4cf;margin-bottom:5px}
+.portrait-identity strong{font-size:clamp(1.15rem,1.6vw,1.45rem);line-height:1.3;color:#fff}
+.portrait-identity span{font-size:.98rem;font-weight:700;color:#a7e9f6}
+.portrait-identity small{font-size:.72rem;color:#c8d8e4;line-height:1.6}
+@keyframes portrait-breathe{to{opacity:.6;transform:translateX(-50%) scale(1.07)}}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.portrait-showcase{min-height:0;margin:22px auto 12px;width:min(100%,440px)}.portrait-showcase .portrait-ring{width:min(76vw,345px);height:min(76vw,345px)}.portrait-showcase .portrait-aura{width:100%;height:360px}.portrait-identity{width:min(92vw,380px)}}
+@media(prefers-reduced-motion:reduce){.portrait-showcase .portrait-aura{animation:none}.portrait-showcase .portrait-ring{transition:none}}
+</style></head>
 
 <body>
+<canvas id="matrix-rain" aria-hidden="true"></canvas><canvas id="ops-cinema" aria-hidden="true"></canvas><div class="cinema-vignette" aria-hidden="true"></div>
 
 
 
@@ -271,7 +457,7 @@ body.motion-off *,body.motion-off *:before,body.motion-off *:after{animation:non
 
   <div class="nav-inner">
 
-    <div class="logo">naren<span>.devops</span></div>
+    <div class="logo">Narendranadh <span>Perni</span></div>
 
     <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button>
     <ul class="nav-links">
@@ -296,7 +482,10 @@ body.motion-off *,body.motion-off *:before,body.motion-off *:after{animation:non
 
 
 
-<header>
+<header><div class="cyber-side" aria-hidden="true"><div class="feed" id="telemetry-feed">[BOOT] loading telemetry streams ...
+[NET] 10.0.12.4 -> 10.0.12.5  0.8ms
+[OK] cluster heartbeat accepted
+[OPS] scanning system journal ...</div></div><div class="cyber-mark">SIMULATED OPERATIONS • CONTINUOUS STREAM</div>
 <div class="ambient" aria-hidden="true"><div class="gridlines"></div><pre>root@linux-prod-03:~# systemctl status nginx
 ● nginx.service - active (running)
 root@linux-prod-03:~# journalctl -u docker --since today
@@ -315,15 +504,17 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
   <div class="hero"><div class="hero-copy">
 
-    <div class="tag">$ whoami</div>
+    <div class="hero-identity">
+      <div class="identity-copy">
+        <div class="tag">$ whoami</div>
+        <h1>Narendranadh Perni<br><span class="hl">DevOps / Cloud Engineer</span></h1>
+        <div class="identity-meta">CARY, NORTH CAROLINA | CLOUD PLATFORMS | PRODUCTION RELIABILITY</div>
+      </div>
+    </div>
+    <div class="typed"><span id="typed-text"></span><span class="caret"></span></div>
+    <p class="sub">I architect resilient cloud platforms and translate complex infrastructure challenges into secure, automated, production-ready solutions. With around six years of engineering experience across AWS and Azure, I combine hands-on technical ownership with cross-functional leadership, aligning application, security, networking and operations teams to deliver dependable platforms, disciplined releases and measurable improvements in reliability.</p>
 
-    <h1>Narendranadh Perni<br><span class="hl">DevOps / Cloud Engineer</span></h1>
-
-    <div class="typed"><span id="typed-text"></span><span class="caret"></span></div>
-
-    <p class="sub">Around 6 years building and running cloud platforms across AWS and Azure: Terraform, Kubernetes, and CI/CD from provisioning to production. Currently engineering Azure messaging platforms at Walgreens.</p>
-
-    <div class="terminal" aria-label="Animated sample Linux troubleshooting terminal"><div class="terminal-head"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="terminal-title">naren@prod-linux · operations</span></div><div class="terminal-body" id="terminal-output" aria-live="off"><div><span class="prompt">$</span> systemctl status nginx</div><div class="ok">✓ active (running)</div><div><span class="prompt">$</span> kubectl get pods -A</div><div class="ok">✓ all workloads healthy</div></div></div><div class="pipeline" aria-label="Simulated CI/CD pipeline"><div class="pipeline-step active"><span class="step-indicator"></span>BUILD</div><div class="pipeline-step"><span class="step-indicator"></span>TEST</div><div class="pipeline-step"><span class="step-indicator"></span>SCAN</div><div class="pipeline-step"><span class="step-indicator"></span>DEPLOY</div></div><div style="height:25px"></div><div class="btns">
+    <div class="mission-profile" aria-label="Engineering specialties"><div class="mission-profile-top"><span><i class="live-dot"></i> ENGINEERING PROFILE</span><span>CARY, NC · USA</span></div><div class="mission-profile-grid"><div><small>PLATFORM ENGINEERING</small><strong>Azure AKS · AWS EKS</strong><span>Cloud networking, workload operations and delivery</span></div><div><small>INFRASTRUCTURE AUTOMATION</small><strong>Terraform · Ansible</strong><span>Repeatable provisioning and configuration</span></div><div><small>RELEASE ENGINEERING</small><strong>Azure DevOps · GitHub Actions</strong><span>Pipeline validation, security checks and deployments</span></div></div></div><div class="ops-strip"><span>● <b>SIMULATED LIVE FEED</b></span><span>LINUX / SSH</span><span>NETWORK / ICMP</span><span>AKS / EKS</span></div><div class="terminal" aria-label="Continuously animated simulated Linux and DevOps troubleshooting console"><div class="terminal-head"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="terminal-title">root@ops-console:~ · multi-stream diagnostic feed</span></div><div class="terminal-body" id="terminal-output" aria-live="off"><div class="term-line cmd">root@ops-console:~$ ./watch-infrastructure.sh</div><div class="term-line good">[OK] telemetry stream initialized</div></div></div><div class="pipeline" aria-label="Simulated CI/CD pipeline"><div class="pipeline-step active"><span class="step-indicator"></span>BUILD</div><div class="pipeline-step"><span class="step-indicator"></span>TEST</div><div class="pipeline-step"><span class="step-indicator"></span>SCAN</div><div class="pipeline-step"><span class="step-indicator"></span>DEPLOY</div></div><div style="height:25px"></div><div class="btns">
 
       <a class="btn btn-primary" href="#projects">View my work</a>
 
@@ -347,7 +538,11 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
   </div>
 
-<div class="hero-art" aria-label="Profile photo and operations visualization"><div class="float-pill pill-one">● Linux fleet <strong>healthy</strong><br>12 / 12 nodes online</div><div class="portrait-ring"><div class="portrait-inner"><img src="profile.jpg" alt="Portrait of Narendranadh Perni" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="photo-placeholder" style="display:none"><svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 22v-2a8 8 0 0 1 16 0v2"/></svg>Your professional photo goes here<code>profile.jpg</code></div></div></div><div class="float-pill pill-two">✓ Deployment <strong>successful</strong><br>AKS · production</div><div class="hero-caption">CLOUD ENGINEERING · AUTOMATION · RELIABILITY</div></div></div></header>
+<aside class="hero-art portrait-showcase" aria-label="Narendranadh Perni professional profile">
+  <div class="portrait-aura" aria-hidden="true"></div>
+  <div class="portrait-ring"><div class="portrait-inner"><img src="profile.jpg" alt="Narendranadh Perni" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="photo-placeholder" style="display:none">Narendranadh Perni<code>profile.jpg</code></div></div></div>
+  <div class="portrait-identity"><strong>Narendranadh Perni</strong><span>DevOps / Cloud Engineer | SRE</span><small>Infrastructure Engineering · Cloud Architecture · Reliability</small></div>
+</aside></div></header>
 
 
 
@@ -395,7 +590,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
     <div class="kicker">// toolbox</div>
 
-    <h2>Skills</h2>
+    <h2>Engineering arsenal<span class="accent-dot">.</span></h2><p class="section-subtitle">Select any technology to explore the architecture, automation and production engineering work behind it.</p>
 
   </div>
 
@@ -405,7 +600,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <h3>☁️ Cloud</h3>
 
-      <div class="tags"><span class="tag2">AWS</span><span class="tag2">Azure</span><span class="tag2">EC2</span><span class="tag2">EKS</span><span class="tag2">AKS</span><span class="tag2">S3</span><span class="tag2">RDS</span><span class="tag2">Lambda</span><span class="tag2">VPC</span><span class="tag2">CosmosDB</span><span class="tag2">Service Bus</span><span class="tag2">Key Vault</span><span class="tag2">ACR</span></div>
+      <div class="tags"><button type="button" class="tag2 skill-trigger" data-skill="AWS" aria-label="Explore AWS experience">AWS<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Azure" aria-label="Explore Azure experience">Azure<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="EC2" aria-label="Explore EC2 experience">EC2<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="EKS" aria-label="Explore EKS experience">EKS<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="AKS" aria-label="Explore AKS experience">AKS<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="S3" aria-label="Explore S3 experience">S3<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="RDS" aria-label="Explore RDS experience">RDS<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Lambda" aria-label="Explore Lambda experience">Lambda<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="VPC" aria-label="Explore VPC experience">VPC<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="CosmosDB" aria-label="Explore CosmosDB experience">CosmosDB<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Service Bus" aria-label="Explore Service Bus experience">Service Bus<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Key Vault" aria-label="Explore Key Vault experience">Key Vault<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="ACR" aria-label="Explore ACR experience">ACR<span class="tag-arrow" aria-hidden="true">↗</span></button></div>
 
     </div>
 
@@ -413,7 +608,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <h3>🏗️ Infrastructure as Code</h3>
 
-      <div class="tags"><span class="tag2">Terraform</span><span class="tag2">CloudFormation</span><span class="tag2">ARM</span><span class="tag2">Bicep</span></div>
+      <div class="tags"><button type="button" class="tag2 skill-trigger" data-skill="Terraform" aria-label="Explore Terraform experience">Terraform<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="CloudFormation" aria-label="Explore CloudFormation experience">CloudFormation<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="ARM" aria-label="Explore ARM experience">ARM<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Bicep" aria-label="Explore Bicep experience">Bicep<span class="tag-arrow" aria-hidden="true">↗</span></button></div>
 
     </div>
 
@@ -421,7 +616,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <h3>📦 Containers & Orchestration</h3>
 
-      <div class="tags"><span class="tag2">Docker</span><span class="tag2">Kubernetes</span><span class="tag2">Helm</span><span class="tag2">EKS</span><span class="tag2">AKS</span></div>
+      <div class="tags"><button type="button" class="tag2 skill-trigger" data-skill="Docker" aria-label="Explore Docker experience">Docker<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Kubernetes" aria-label="Explore Kubernetes experience">Kubernetes<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Helm" aria-label="Explore Helm experience">Helm<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="EKS" aria-label="Explore EKS experience">EKS<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="AKS" aria-label="Explore AKS experience">AKS<span class="tag-arrow" aria-hidden="true">↗</span></button></div>
 
     </div>
 
@@ -429,7 +624,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <h3>🔄 CI/CD</h3>
 
-      <div class="tags"><span class="tag2">Jenkins</span><span class="tag2">GitHub Actions</span><span class="tag2">Azure DevOps</span><span class="tag2">GitLab CI</span><span class="tag2">Argo CD</span><span class="tag2">Harness</span></div>
+      <div class="tags"><button type="button" class="tag2 skill-trigger" data-skill="Jenkins" aria-label="Explore Jenkins experience">Jenkins<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="GitHub Actions" aria-label="Explore GitHub Actions experience">GitHub Actions<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Azure DevOps" aria-label="Explore Azure DevOps experience">Azure DevOps<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="GitLab CI" aria-label="Explore GitLab CI experience">GitLab CI<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Argo CD" aria-label="Explore Argo CD experience">Argo CD<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Harness" aria-label="Explore Harness experience">Harness<span class="tag-arrow" aria-hidden="true">↗</span></button></div>
 
     </div>
 
@@ -437,7 +632,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <h3>⚙️ Automation & Scripting</h3>
 
-      <div class="tags"><span class="tag2">Python</span><span class="tag2">Bash</span><span class="tag2">PowerShell</span><span class="tag2">Ansible</span></div>
+      <div class="tags"><button type="button" class="tag2 skill-trigger" data-skill="Python" aria-label="Explore Python experience">Python<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Bash" aria-label="Explore Bash experience">Bash<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="PowerShell" aria-label="Explore PowerShell experience">PowerShell<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Ansible" aria-label="Explore Ansible experience">Ansible<span class="tag-arrow" aria-hidden="true">↗</span></button></div>
 
     </div>
 
@@ -445,7 +640,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <h3>📊 Observability</h3>
 
-      <div class="tags"><span class="tag2">Dynatrace</span><span class="tag2">Datadog</span><span class="tag2">Prometheus</span><span class="tag2">Grafana</span><span class="tag2">ELK</span><span class="tag2">CloudWatch</span><span class="tag2">Azure Monitor</span></div>
+      <div class="tags"><button type="button" class="tag2 skill-trigger" data-skill="Dynatrace" aria-label="Explore Dynatrace experience">Dynatrace<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Datadog" aria-label="Explore Datadog experience">Datadog<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Prometheus" aria-label="Explore Prometheus experience">Prometheus<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Grafana" aria-label="Explore Grafana experience">Grafana<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="ELK" aria-label="Explore ELK experience">ELK<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="CloudWatch" aria-label="Explore CloudWatch experience">CloudWatch<span class="tag-arrow" aria-hidden="true">↗</span></button><button type="button" class="tag2 skill-trigger" data-skill="Azure Monitor" aria-label="Explore Azure Monitor experience">Azure Monitor<span class="tag-arrow" aria-hidden="true">↗</span></button></div>
 
     </div>
 
@@ -456,94 +651,24 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
 
 <section id="experience">
-
-  <div class="sec-head reveal">
-
-    <div class="kicker">// journey</div>
-
-    <h2>Experience</h2>
-
-  </div>
-
-  <div class="timeline">
-
-    <div class="t-item reveal">
-
-      <div class="role">DevOps Engineer</div>
-
-      <div class="co">Walgreens · Deerfield, IL</div>
-
-      <div class="when">May 2026 - Present</div>
-
-      <ul>
-
-        <li>Architected the Azure cloud platform for enterprise messaging services across DEV, UAT, PERF and PROD: production-ready AKS with ACR, Key Vault, Cosmos DB and Service Bus.</li>
-
-        <li>Designed IaC and environment configs via Harness: AKS networking, Private Endpoints, VNet routing, NSGs, Private DNS and identity.</li>
-
-        <li>Engineered Kubernetes/Helm deployment standards: probes, resource limits, autoscaling, environment-specific values.</li>
-
-        <li>Built end-to-end CI/CD for messaging microservices with Azure DevOps, Gradle, Docker, ACR and Helm.</li>
-
-        <li>Onboarded AKS clusters to Dynatrace (OneAgent) with custom dashboards for cluster and app health.</li>
-
-        <li>Serve as Lead Infrastructure SME across Azure, AKS, networking, CI/CD, security and observability.</li>
-
-      </ul>
-
-    </div>
-
-    <div class="t-item reveal">
-
-      <div class="role">Cloud Operations Engineer <span style="color:var(--muted);font-weight:400;font-size:.85rem">(Contractor)</span></div>
-
-      <div class="co">Railinc · Cary, NC</div>
-
-      <div class="when">Oct 2022 - Apr 2026</div>
-
-      <ul>
-
-        <li>Ran GitOps-driven CI/CD with Argo CD, Jenkins, Terraform and Kubernetes across Amazon EKS for zero-downtime releases.</li>
-
-        <li>Built reusable Terraform modules standardizing IaC across environments.</li>
-
-        <li>Administered secure multi-tenant EKS clusters: RBAC, network policies, IAM integration.</li>
-
-        <li>Automated Linux patching with AWS Lambda + Step Functions.</li>
-
-        <li>Designed multi-region DR (Route 53 failover, RDS replicas, S3 CRR), cutting failover from hours to under 60 minutes.</li>
-
-        <li>Datadog SME: custom dashboards, proactive alerting, runbooks, cutting incident resolution time by 40%.</li>
-
-      </ul>
-
-    </div>
-
-    <div class="t-item reveal">
-
-      <div class="role">DevOps Engineer</div>
-
-      <div class="co">Wind Steller · Hyderabad, India</div>
-
-      <div class="when">May 2019 - Dec 2020</div>
-
-      <ul>
-
-        <li>Built reusable Terraform modules with remote state for Azure across DEV, UAT and PROD.</li>
-
-        <li>Managed AKS workloads with Helm: rolling deployments, probes, autoscaling.</li>
-
-        <li>Architected Azure Landing Zones: VNets, NSGs, routing, RBAC, ExpressRoute/VPN hybrid connectivity.</li>
-
-        <li>Engineered CI/CD with GitHub Actions, Git and Ansible; centralized observability with Azure Monitor.</li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-</section>
+<div class="sec-head reveal"><div class="kicker">// professional journey</div>
+<h2>Production engineering<span class="accent-dot">.</span></h2>
+<p class="section-subtitle">Architecture, automation, reliability and technical ownership  -  grounded in delivered work.</p></div>
+<div class="timeline"><article class="t-item reveal experience-card">
+      <div class="role">DevOps Engineer</div><div class="co">Walgreens · Deerfield, IL</div>
+      <div class="when">May 2026 – Present</div>
+      <ul><li>Architected the Azure cloud platform for enterprise messaging services across DEV, UAT, PERF, and PROD, designing production-ready AKS infrastructure and integrating ACR, Key Vault, Cosmos DB, and Service Bus with scalable, secure environment configurations.</li><li>Designed and deployed Infrastructure-as-Code and environment configurations through Harness workflows, engineering AKS networking, Private Endpoints, VNet/subnet routing, NSGs, Private DNS, identity/access, and Azure PaaS integrations for secure production workloads.</li><li>Engineered Kubernetes/Helm deployment standards covering Deployments, Services, ConfigMaps, Secrets, probes, resource requests/limits, autoscaling, and environment-specific values across AKS environments.</li><li>Defined and engineered the end-to-end CI/CD architecture and release workflow for messaging microservices using Azure DevOps, Gradle, Docker, ACR, and Helm, standardizing build, security/quality gates, artifact promotion, environment deployments, approvals, and production release validation.</li><li>Serve as the Lead Infrastructure SME for the messaging platform, driving architecture discussions, technical design decisions, implementation strategy, and production readiness across Azure, AKS, PaaS services, networking, CI/CD, security, and observability.</li><li>Implemented HPA-based autoscaling for AKS microservices using CPU/memory metrics and also proposed KEDA event-driven autoscaling based on Azure Service Bus queue depth to better align pod scaling with messaging workloads.</li><li>Secured application-to-Azure service access using Managed Identity/Workload Identity, Kubernetes RBAC, Key Vault integration, ACR permissions, and least-privilege access controls.</li><li>Designed and deployed self-hosted Azure DevOps agents on AKS, integrating approved ACR images and rootless BuildKit to support secure container builds within enterprise Kubernetes policies.</li><li>Onboarded enterprise AKS clusters to Dynatrace by deploying and configuring OneAgent, enabling Kubernetes workload/infrastructure observability and building custom dashboards for cluster health, application performance, and production monitoring.</li><li>Automated legacy Java/Gradle application deployments through reusable Azure DevOps pipelines with artifact versioning, Git tagging, approvals, release notes, Azure Artifacts, and SSH-based server deployments.</li><li>Established comprehensive technical documentation, architecture/runbooks, deployment procedures, and troubleshooting guides for the Azure/AKS platform and CI/CD workflows, led KT sessions to enable cross-team operational readiness and platform support.</li><li>Led cross-functional RCA and production readiness across AKS, Kubernetes, Helm, ACR, Key Vault, CI/CD, DNS, Private Endpoints, NSGs, and networking, partnering with security, network, application, and infrastructure teams to resolve complex platform and connectivity issues.</li></ul>
+    </article>
+<article class="t-item reveal experience-card">
+      <div class="role">Cloud Operations Engineer</div><div class="co">Railinc Corp · Cary, NC</div>
+      <div class="when">Oct 2022 – Apr 2026</div>
+      <ul><li>Engineered and maintained GitOps-driven CI/CD pipelines using Argo CD, Jenkins, Terraform, and Kubernetes, automating application deployments across Amazon EKS environments and reducing deployment failures while enabling zero-downtime releases.</li><li>Designed and developed reusable Terraform modules to provision and manage AWS infrastructure across multiple environments, standardizing Infrastructure as Code (IaC) practices and reducing environment provisioning effort.</li><li>Architected and administered secure multi-tenant Amazon EKS clusters, implementing Kubernetes RBAC, namespace isolation, network policies, IAM integrations, resource controls, and security best practices to strengthen workload isolation and access governance.</li><li>Automated Linux patching and infrastructure maintenance workflows using AWS Lambda and Step Functions, reducing manual operational effort and improving consistency across AWS environments.</li><li>Designed, implemented, and validated multi-region Disaster Recovery (DR) solutions using Amazon Route 53 failover routing, RDS read replicas, and S3 Cross-Region Replication, reducing application failover time from hours to under 60 minutes.</li><li>Integrated Ansible playbooks with Jenkins pipelines to automate server configuration, infrastructure provisioning, application deployments, and repeatable operational tasks across development, QA, staging, and production environments.</li><li>Served as Datadog SME, engineering custom dashboards and proactive alerting, leading production troubleshooting and RCA, and developing runbooks/documentation to improve observability and incident response.</li><li>Implemented comprehensive monitoring, logging, dashboards, and alerting using Datadog and Amazon CloudWatch, improving application and infrastructure visibility and reducing incident resolution time by 40%.</li><li>Provided 24×7 production on-call support for mission-critical workloads, troubleshooting complex issues across Kubernetes/EKS, Linux, NGINX, DNS, networking, load balancing, and persistent storage, contributing to a 35% reduction in MTTR.</li><li>Performed root-cause analysis (RCA) for production incidents and implemented long-term corrective actions through automation, monitoring enhancements, infrastructure changes, and deployment improvements, increasing platform stability and preventing recurring failures.</li><li>Collaborated with application, security, networking, database, and infrastructure teams to troubleshoot cross-platform issues, coordinate production releases, and deliver highly available cloud-native services.</li><li>Conducted technical knowledge-sharing sessions on AWS, Kubernetes, Terraform, CI/CD, infrastructure automation, and production troubleshooting, improving team operational readiness and reducing knowledge-related production incidents.</li></ul>
+    </article>
+<article class="t-item reveal experience-card">
+      <div class="role">DevOps Engineer</div><div class="co">Wind Steller · Hyderabad, India</div>
+      <div class="when">May 2019 – Dec 2020</div>
+      <ul><li>Developed reusable Terraform modules with remote state and environment-specific configurations, enabling consistent and repeatable Azure provisioning across DEV, UAT, and PROD.</li><li>Managed containerized workloads on AKS using Kubernetes and Helm, implementing rolling deployments, health probes, resource limits, and autoscaling to improve availability and deployment reliability.</li><li>Architected Azure Landing Zones using Terraform, standardizing VNets, NSGs, routing, and RBAC while enabling hybrid connectivity via ExpressRoute/VPN, reducing network latency.</li><li>Engineered CI/CD pipelines using GitHub Actions, Git, and Ansible, automating build, validation, configuration, deployment, and environment promotion across multiple stages.</li><li>Automated Git and release-management workflows using Python and Azure DevOps, reducing repetitive version-control and deployment activities.</li><li>Implemented centralized observability using Azure Monitor and Log Analytics, building metrics, dashboards, logs, and alerts to accelerate incident detection and root-cause analysis.</li><li>Strengthened Azure security using RBAC, Managed Identities, NSGs, private networking, and least-privilege access, improving workload isolation and compliance readiness.</li><li>Led production troubleshooting and RCA across AKS, Linux, DNS, Azure networking, load balancers, Terraform, and CI/CD, implementing permanent fixes to improve platform reliability.</li></ul>
+    </article></div></section>
 
 
 
@@ -553,7 +678,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
     <div class="kicker">// selected work</div>
 
-    <h2>Projects</h2>
+    <h2>Mission dossiers<span class="accent-dot">.</span></h2><p class="section-subtitle">Explore the architecture and implementation behind each project. Click a dossier to expand the technical breakdown.</p>
 
   </div>
 
@@ -567,7 +692,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <p>Production-style Terraform for AWS VPC + EKS: managed node groups, private nodes, per-AZ NAT gateways.</p>
 
-      <div class="p-tags"><span>Terraform</span><span>AWS</span><span>EKS</span><span>Kubernetes</span></div>
+      <div class="p-tags"><span>Terraform</span><span>AWS</span><span>EKS</span><span>Kubernetes</span></div><details class="project-dossier"><summary>Explore technical breakdown <span aria-hidden="true">↗</span></summary><div class="dossier-inner"><div class="dossier-label">// IMPLEMENTATION HIGHLIGHTS</div><ol><li>Define VPC and subnet foundations for an EKS environment.</li><li>Configure managed Kubernetes node groups.</li><li>Design private-node networking and NAT per availability zone.</li><li>Organize AWS infrastructure through Terraform configurations.</li></ol><a href="https://github.com/NarenPerni007/terraform-aws-eks" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div></details>
 
     </div>
 
@@ -579,7 +704,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <p>Terraform for Azure AKS from scratch: VNet, autoscaling node pools, managed identity, workload identity.</p>
 
-      <div class="p-tags"><span>Terraform</span><span>Azure</span><span>AKS</span><span>Kubernetes</span></div>
+      <div class="p-tags"><span>Terraform</span><span>Azure</span><span>AKS</span><span>Kubernetes</span></div><details class="project-dossier"><summary>Explore technical breakdown <span aria-hidden="true">↗</span></summary><div class="dossier-inner"><div class="dossier-label">// IMPLEMENTATION HIGHLIGHTS</div><ol><li>Provision Azure networking and AKS infrastructure.</li><li>Configure autoscaling node pools.</li><li>Use managed identity and workload identity patterns.</li><li>Organize repeatable infrastructure deployment with Terraform.</li></ol><a href="https://github.com/NarenPerni007/terraform-azure-aks" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div></details>
 
     </div>
 
@@ -591,7 +716,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <p>Hardened Helm chart: HPA, PodDisruptionBudgets, liveness/readiness probes, ingress TLS, non-root containers.</p>
 
-      <div class="p-tags"><span>Helm</span><span>Kubernetes</span><span>DevOps</span></div>
+      <div class="p-tags"><span>Helm</span><span>Kubernetes</span><span>DevOps</span></div><details class="project-dossier"><summary>Explore technical breakdown <span aria-hidden="true">↗</span></summary><div class="dossier-inner"><div class="dossier-label">// IMPLEMENTATION HIGHLIGHTS</div><ol><li>Package Kubernetes workloads as a reusable Helm chart.</li><li>Configure HPA and PodDisruptionBudget safeguards.</li><li>Add liveness and readiness health probes.</li><li>Support ingress TLS and non-root container settings.</li></ol><a href="https://github.com/NarenPerni007/webapp-helm-chart" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div></details>
 
     </div>
 
@@ -603,7 +728,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <p>Azure DevOps multi-stage pipelines: ACR builds with Trivy scanning, Helm deploys to AKS, Dynatrace deployment events.</p>
 
-      <div class="p-tags"><span>Azure DevOps</span><span>CI/CD</span><span>AKS</span><span>Dynatrace</span></div>
+      <div class="p-tags"><span>Azure DevOps</span><span>CI/CD</span><span>AKS</span><span>Dynatrace</span></div><details class="project-dossier"><summary>Explore technical breakdown <span aria-hidden="true">↗</span></summary><div class="dossier-inner"><div class="dossier-label">// IMPLEMENTATION HIGHLIGHTS</div><ol><li>Structure reusable multi-stage Azure DevOps pipelines.</li><li>Build and publish container images to Azure Container Registry.</li><li>Include Trivy image scanning in the delivery flow.</li><li>Deploy Helm releases to AKS and publish Dynatrace events.</li></ol><a href="https://github.com/NarenPerni007/azure-devops-pipeline-templates" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div></details>
 
     </div>
 
@@ -615,7 +740,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <p>Reusable GitHub Actions: Terraform plan/apply via OIDC, Docker build + scan + push, Kubernetes rollouts.</p>
 
-      <div class="p-tags"><span>GitHub Actions</span><span>Terraform</span><span>Docker</span></div>
+      <div class="p-tags"><span>GitHub Actions</span><span>Terraform</span><span>Docker</span></div><details class="project-dossier"><summary>Explore technical breakdown <span aria-hidden="true">↗</span></summary><div class="dossier-inner"><div class="dossier-label">// IMPLEMENTATION HIGHLIGHTS</div><ol><li>Build reusable GitHub Actions workflows.</li><li>Include Terraform plan and apply stages with OIDC authentication.</li><li>Automate Docker build, scan and push steps.</li><li>Manage Kubernetes rollout steps through CI/CD.</li></ol><a href="https://github.com/NarenPerni007/cicd-pipeline-templates" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div></details>
 
     </div>
 
@@ -627,7 +752,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <p>Reusable Ansible roles for server setup: sshd/sysctl hardening, fail2ban, Docker, nginx reverse proxy.</p>
 
-      <div class="p-tags"><span>Ansible</span><span>Linux</span><span>Automation</span></div>
+      <div class="p-tags"><span>Ansible</span><span>Linux</span><span>Automation</span></div><details class="project-dossier"><summary>Explore technical breakdown <span aria-hidden="true">↗</span></summary><div class="dossier-inner"><div class="dossier-label">// IMPLEMENTATION HIGHLIGHTS</div><ol><li>Create reusable roles for Linux host setup.</li><li>Configure SSH and kernel settings for baseline hardening.</li><li>Automate fail2ban and Docker setup.</li><li>Configure nginx as a reverse proxy.</li></ol><a href="https://github.com/NarenPerni007/ansible-playbooks" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div></details>
 
     </div>
 
@@ -639,7 +764,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <p>boto3 scripts for AWS hygiene: EC2 scheduler, EBS/RDS snapshot cleanup, S3 inventory reports.</p>
 
-      <div class="p-tags"><span>Python</span><span>AWS</span><span>boto3</span></div>
+      <div class="p-tags"><span>Python</span><span>AWS</span><span>boto3</span></div><details class="project-dossier"><summary>Explore technical breakdown <span aria-hidden="true">↗</span></summary><div class="dossier-inner"><div class="dossier-label">// IMPLEMENTATION HIGHLIGHTS</div><ol><li>Automate AWS inventory and operational housekeeping using boto3.</li><li>Schedule EC2 instances where appropriate.</li><li>Handle EBS and RDS snapshot cleanup routines.</li><li>Generate S3 inventory reports.</li></ol><a href="https://github.com/NarenPerni007/python-cloud-automation" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div></details>
 
     </div>
 
@@ -651,7 +776,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <p>Bash toolkit for day-to-day Linux admin: disk alerts, health checks, log archival, patch checks, S3 backups.</p>
 
-      <div class="p-tags"><span>Bash</span><span>Linux</span><span>SysAdmin</span></div>
+      <div class="p-tags"><span>Bash</span><span>Linux</span><span>SysAdmin</span></div><details class="project-dossier"><summary>Explore technical breakdown <span aria-hidden="true">↗</span></summary><div class="dossier-inner"><div class="dossier-label">// IMPLEMENTATION HIGHLIGHTS</div><ol><li>Automate disk-space monitoring and alerts.</li><li>Run repeatable Linux service and health checks.</li><li>Archive logs and check patch state.</li><li>Support S3 backup workflows.</li></ol><a href="https://github.com/NarenPerni007/linux-admin-toolkit" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div></details>
 
     </div>
 
@@ -663,7 +788,7 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
       <p>Prometheus alert rules, Grafana dashboards, Alertmanager routing, plus production runbooks.</p>
 
-      <div class="p-tags"><span>Prometheus</span><span>Grafana</span><span>Observability</span></div>
+      <div class="p-tags"><span>Prometheus</span><span>Grafana</span><span>Observability</span></div><details class="project-dossier"><summary>Explore technical breakdown <span aria-hidden="true">↗</span></summary><div class="dossier-inner"><div class="dossier-label">// IMPLEMENTATION HIGHLIGHTS</div><ol><li>Create Prometheus alert rules for operational signals.</li><li>Build Grafana dashboards for visibility.</li><li>Configure Alertmanager routing.</li><li>Document response steps in production runbooks.</li></ol><a href="https://github.com/NarenPerni007/monitoring-dashboards" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div></details>
 
     </div>
 
@@ -723,6 +848,8 @@ Plan: 0 to add, 0 to change, 0 to destroy</pre></div>
 
 
 
+
+<div class="skill-modal" id="skill-modal" aria-hidden="true"><div class="skill-modal-backdrop" data-close="true"></div><div class="skill-dialog" role="dialog" aria-modal="true" aria-labelledby="skill-dialog-title" tabindex="-1"><div class="dialog-top"><span>ENGINEERING CAPABILITY // SELECTED TOOL</span><button class="dialog-close" type="button" aria-label="Close details">✕</button></div><div class="dialog-body"><div class="dialog-kicker">$ inspect --capability</div><h2 id="skill-dialog-title"></h2><p class="dialog-lead">How I apply this technology in DevOps and cloud engineering</p><ol id="skill-points"></ol><div class="dialog-footer"><span class="pulse-led"></span> PRACTICAL ENGINEERING FOCUS </div></div></div></div>
 <script>
 
 // typed effect
@@ -774,12 +901,134 @@ navToggle.addEventListener('click',()=>{const opened=navLinks.classList.toggle('
 navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');navToggle.setAttribute('aria-expanded','false');}));
 document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b===btn));document.querySelectorAll('.proj[data-category]').forEach(p=>p.hidden=btn.dataset.filter!=='all'&&p.dataset.category!==btn.dataset.filter);}));
 document.getElementById('copy-email').addEventListener('click',async function(){try{await navigator.clipboard.writeText('narendranadhp20@gmail.com');this.textContent='✓ Email copied';}catch(e){this.textContent='Select the email link above to copy';}setTimeout(()=>this.textContent='⧉ Copy email address',2200)});
-const lines=[['$ ssh prod-linux-03','✓ authenticated with SSH key'],['$ sudo systemctl status nginx','✓ active (running)'],['$ journalctl -p err -n 10','✓ no critical errors found'],['$ kubectl rollout status deployment/api','✓ successfully rolled out'],['$ ansible all -m ping','✓ all hosts responding'],['$ df -h /var','✓ disk utilization normal']];let lineIndex=0,stepIndex=0;
-setInterval(()=>{if(document.body.classList.contains('motion-off'))return;lineIndex=(lineIndex+1)%lines.length;const [cmd,status]=lines[lineIndex];document.getElementById('terminal-output').innerHTML='<div><span class="prompt">'+cmd.slice(0,1)+'</span>'+cmd.slice(1)+'</div><div class="ok">'+status+'</div><div><span class="prompt">$</span> monitoring infrastructure...</div>';stepIndex=(stepIndex+1)%4;document.querySelectorAll('.pipeline-step').forEach((n,i)=>n.classList.toggle('active',i===stepIndex));},3200);
+const terminal=document.getElementById('terminal-output');
+const scenarios=[
+ [['cmd','ssh -i ~/.ssh/ops.pem admin@linux-prod-03'],['info','Authenticated using publickey; session established'],['cmd','sudo journalctl -u nginx --since "5 min ago"'],['good','nginx.service: active (running), requests served: 14,286']],
+ [['cmd','ping -c 4 10.24.8.15'],['info','64 bytes from 10.24.8.15: icmp_seq=1 ttl=63 time=0.82 ms'],['info','64 bytes from 10.24.8.15: icmp_seq=2 ttl=63 time=0.74 ms'],['good','4 packets transmitted, 4 received, 0% packet loss']],
+ [['cmd','kubectl get pods -n production -o wide'],['info','api-7f8d9b-2kc4z     1/1 Running   0   12d'],['info','worker-6b47c9-7zq2n  1/1 Running   0   12d'],['good','deployment/api: rollout successfully completed']],
+ [['cmd','df -h /var && free -m'],['info','/dev/sda2   80G   29G   51G  37% /var'],['info','Mem:  16384  6842  9542'],['good','Filesystem and memory within operating thresholds']],
+ [['cmd','ansible linux_fleet -m ping'],['good','linux-01 | SUCCESS => pong'],['good','linux-02 | SUCCESS => pong'],['good','linux-03 | SUCCESS => pong']],
+ [['cmd','terraform plan -no-color'],['info','Refreshing state... reading 42 managed resources'],['good','No changes. Your infrastructure matches the configuration.']],
+ [['cmd','az aks show --name prod-aks --query provisioningState'],['good','"Succeeded"'],['cmd','kubectl top nodes'],['info','aks-node-01  26% CPU  48% MEM'],['info','aks-node-02  19% CPU  41% MEM']],
+ [['cmd','traceroute 10.20.4.8'],['info','1  gateway.internal  0.35 ms'],['info','2  firewall.internal 0.61 ms'],['good','3  10.20.4.8  0.94 ms  -  destination reached']],
+ [['cmd','docker ps --format "table {{.Names}}\\t{{.Status}}"'],['info','nginx-proxy   Up 9 days (healthy)'],['info','telemetry-agent   Up 9 days (healthy)'],['good','All containers passed health checks']],
+ [['cmd','curl -s -o /dev/null -w "%{http_code} %{time_total}s" https://service.example'],['good','200 0.084s  • synthetic endpoint check passed']],
+ [['cmd','sudo ss -tulpn | grep LISTEN'],['info','tcp 0 128 0.0.0.0:443 LISTEN nginx'],['info','tcp 0 128 127.0.0.1:9090 LISTEN prometheus']],
+ [['cmd','kubectl get hpa -A'],['info','production/api   cpu: 31%/70%   3   10   3'],['good','Horizontal pod autoscaling operational']],
+ [['cmd','git status --short && ./pipeline.sh --verify'],['info','BUILD ✓  TEST ✓  SCAN ✓  DEPLOY ✓'],['good','CI/CD validation complete; no failures detected']]
+];
+let seq=0,stepIndex=0,streamTimer;
+function addTerminalLine(type,message){const line=document.createElement('div');line.className='term-line '+type;const stamp=document.createElement('span');stamp.className='stamp';stamp.textContent=new Date().toLocaleTimeString('en-US',{hour12:false})+' ';line.appendChild(stamp);if(type==='cmd'){const prompt=document.createElement('span');prompt.className='shell';prompt.textContent='root@ops:~$ ';line.appendChild(prompt);}line.appendChild(document.createTextNode(message));terminal.appendChild(line);while(terminal.children.length>17)terminal.removeChild(terminal.firstChild);terminal.scrollTop=terminal.scrollHeight;}
+let pending=[];
+function stream(){if(document.body.classList.contains('motion-off')||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;if(!pending.length){pending=scenarios[seq++%scenarios.length].slice();stepIndex=(stepIndex+1)%4;document.querySelectorAll('.pipeline-step').forEach((n,i)=>n.classList.toggle('active',i===stepIndex));}const item=pending.shift();addTerminalLine(item[0],item[1]);}
+streamTimer=setInterval(stream,760);
+const telemetry=document.getElementById('telemetry-feed');
+const identityCommands=[
+  ['$ whoami','narendranadh-perni'],
+  ['$ hostnamectl --pretty','Narendranadh | DevOps & Cloud Engineer'],
+  ['$ cat /etc/profile.d/location.conf','LOCATION="Cary, North Carolina, USA"'],
+  ['$ cat ~/profile.json','{"name":"Narendranadh Perni","role":"DevOps Engineer","location":"Cary, NC"}'],
+  ['$ kubectl get skills -o wide','CLOUD      AWS · Azure · AKS · EKS'],
+  ['$ kubectl get skills -o wide','PLATFORM   Kubernetes · Docker · Helm'],
+  ['$ terraform output toolchain','Terraform · Bicep · CloudFormation'],
+  ['$ cat ~/pipelines/tools.txt','Azure DevOps | GitHub Actions | Jenkins | Argo CD'],
+  ['$ grep -i automation ~/skills','Bash · Python · PowerShell · Ansible'],
+  ['$ systemctl status observability','Prometheus · Grafana · Dynatrace · Datadog'],
+  ['$ git config --get user.name','Narendranadh Perni'],
+  ['$ curl -Is https://github.com/NarenPerni007','HTTP/2 200  [SIMULATED]'],
+  ['$ ping -c 1 cloud-platform','64 bytes: icmp_seq=1 ttl=64 time=0.82 ms [SIMULATED]'],
+  ['$ kubectl get deployments','platform-engineering   3/3   Available [DEMO]'],
+  ['$ echo $MISSION','Build reliable infrastructure. Automate everything.'],
+  ['$ ./about-me --status','OPEN TO CONNECT · DEVOPS / SRE / PLATFORM ENGINEERING']
+];
+let telemetryIndex=0;
+function updateTelemetry(){if(document.body.classList.contains('motion-off')||document.hidden||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const [command,response]=identityCommands[telemetryIndex++%identityCommands.length];
+  telemetry.textContent+='\n'+command+'\n  '+response;
+  const lines=telemetry.textContent.split('\n');if(lines.length>34)telemetry.textContent=lines.slice(-34).join('\n');
+}
+telemetry.textContent='naren-perni@cloud-ops:~$ ./initialize-profile.sh\n  [OK] PROFILE SESSION STARTED\n  [INFO] Demo terminal · simulated output';
+setInterval(updateTelemetry,1450);
+const rain=document.getElementById('matrix-rain'),ctx=rain.getContext('2d');let columns=[],width=0,height=0,frame=0;function resizeRain(){const ratio=Math.min(window.devicePixelRatio||1,1.5);width=innerWidth;height=innerHeight;rain.width=Math.floor(width*ratio);rain.height=Math.floor(height*ratio);ctx.setTransform(ratio,0,0,ratio,0,0);columns=Array.from({length:Math.ceil(width/22)},()=>Math.random()*height/18);}resizeRain();window.addEventListener('resize',resizeRain,{passive:true});
+function drawRain(){requestAnimationFrame(drawRain);if(document.body.classList.contains('motion-off')||document.hidden||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;if(++frame%3)return;ctx.fillStyle='rgba(3,10,16,.095)';ctx.fillRect(0,0,width,height);ctx.font='13px Consolas,monospace';for(let i=0;i<columns.length;i++){const c='01{}[]<>/$#'.charAt(Math.floor(Math.random()*11));ctx.fillStyle=Math.random()>.97?'rgba(151,255,216,.92)':'rgba(28,206,155,.49)';ctx.fillText(c,i*22,columns[i]*18);if(columns[i]*18>height&&Math.random()>.98)columns[i]=0;else columns[i]+=.24+Math.random()*.5;}}requestAnimationFrame(drawRain);
 const motion=document.createElement('button');motion.className='motion-toggle';motion.textContent='Ⅱ Pause animations';motion.setAttribute('aria-label','Pause animations');document.body.appendChild(motion);motion.addEventListener('click',()=>{const off=document.body.classList.toggle('motion-off');motion.textContent=off?'▶ Resume animations':'Ⅱ Pause animations';});
 
+
+// V5 interactive technology explorer: editorial highlights, not verified performance metrics.
+const capabilityNotes = {"Terraform":["Designed reusable Terraform modules for AWS infrastructure across multiple environments, reducing repetitive provisioning and standardizing IaC practices.","Developed Azure Terraform modules with remote state and environment-specific configurations for DEV, UAT and PROD.","Architected Azure Landing Zones using Terraform, including VNets, NSGs, routing, RBAC and hybrid connectivity.","Integrated Terraform with Jenkins and GitOps workflows supporting automated infrastructure and application delivery."],"AWS":["Architected and administered secure multi-tenant Amazon EKS clusters using RBAC, namespace isolation, IAM integration and network policies.","Engineered reusable Terraform modules to provision and manage AWS infrastructure across environments.","Automated Linux patching and maintenance using AWS Lambda and Step Functions.","Designed and validated multi-region disaster recovery using Route 53 failover, RDS read replicas and S3 cross-region replication, reducing failover time to under 60 minutes.","Implemented operational monitoring using Datadog and CloudWatch, contributing to a 40% reduction in incident resolution time."],"Azure":["Architected enterprise Azure messaging platforms across DEV, UAT, PERF and PROD, integrating AKS, ACR, Key Vault, Cosmos DB and Service Bus.","Designed secure cloud networking with Private Endpoints, VNet/subnet routing, NSGs, Private DNS and managed identities.","Engineered Azure DevOps release workflows for microservices with Gradle, Docker, ACR, Helm, approval gates and production validation.","Designed self-hosted Azure DevOps agents on AKS using approved ACR images and rootless BuildKit.","Implemented HPA autoscaling for AKS workloads and proposed KEDA scaling based on Service Bus queue depth.","Onboarded AKS clusters to Dynatrace OneAgent and developed custom operational dashboards."],"Azure DevOps":["Defined CI/CD architecture for messaging microservices with Gradle, Docker, ACR and Helm, including quality gates, artifact promotion and approvals.","Designed self-hosted Azure DevOps agents running on AKS with rootless BuildKit for secure image builds.","Automated legacy Java/Gradle releases with artifact versioning, Git tags, release notes, approvals and SSH deployments.","Automated Git and release-management activities using Python and Azure DevOps."],"Kubernetes":["Engineered AKS deployment standards covering Deployments, Services, ConfigMaps, Secrets, probes, resource requests and limits.","Implemented HPA-based scaling using CPU and memory metrics; proposed KEDA queue-depth autoscaling for Service Bus workloads.","Architected secure EKS multi-tenancy with namespace isolation, RBAC, network policies and IAM integration.","Led production troubleshooting and RCA across AKS, EKS, networking, DNS, ingress and storage."],"AKS":["Architected production-ready AKS infrastructure across four Azure environments for enterprise messaging services.","Engineered Helm-based releases with health probes, resource controls and environment-specific configuration.","Secured workload access with managed/workload identity, Kubernetes RBAC, Key Vault and private networking.","Implemented HPA scaling and proposed event-driven KEDA scaling for queue-based workloads.","Integrated Dynatrace OneAgent to observe infrastructure and application health."],"EKS":["Architected and administered multi-tenant Amazon EKS clusters with RBAC, namespace isolation, IAM and network policies.","Engineered GitOps delivery with Argo CD, Jenkins, Terraform and Kubernetes for zero-downtime releases.","Troubleshot production EKS, Linux, NGINX, DNS, load balancing and persistent storage issues."],"Jenkins":["Engineered Jenkins and Argo CD delivery workflows for Kubernetes applications on Amazon EKS.","Integrated Ansible into Jenkins pipelines for server configuration and repeatable deployments.","Combined Jenkins with Terraform-driven infrastructure provisioning across environments."],"GitHub Actions":["Engineered multi-stage GitHub Actions pipelines for build, validation and application deployment.","Integrated Git and Ansible automation for repeatable environment promotion.","Automated release workflows to reduce manual deployment activities."],"Helm":["Engineered Helm deployment standards for AKS workloads with Services, ConfigMaps, Secrets and health probes.","Configured resource requests, limits, autoscaling and environment-specific values.","Integrated Helm deployments into Azure DevOps release workflows with approvals and validation."],"Ansible":["Integrated Ansible playbooks with Jenkins to automate server configuration and application deployments.","Standardized operational tasks across development, QA, staging and production environments.","Engineered GitHub Actions and Ansible workflows for build, validation and environment promotion."],"Linux":["Automated Linux patching and maintenance using AWS Lambda and Step Functions.","Troubleshot production Linux, NGINX, DNS, networking and persistent storage incidents.","Led root-cause analysis and implemented long-term corrective actions through automation and monitoring."],"Datadog":["Served as Datadog SME, engineering dashboards, proactive alerts and incident-response runbooks.","Integrated Datadog and CloudWatch telemetry for application and infrastructure visibility.","Led production troubleshooting and RCA using monitoring data, contributing to a 40% reduction in incident resolution time."],"Dynatrace":["Onboarded enterprise AKS clusters to Dynatrace using OneAgent.","Engineered custom dashboards for cluster health, application performance and production monitoring.","Used workload and infrastructure observability to support operational troubleshooting."],"Argo CD":["Engineered GitOps-driven application delivery using Argo CD with Jenkins and Amazon EKS.","Automated deployment synchronization across Kubernetes environments.","Supported zero-downtime releases by standardizing deployment workflows and environment consistency."],"Docker":["Engineered Docker-based microservice build workflows using Azure DevOps and Gradle.","Published container images to Azure Container Registry for Helm-based AKS deployments.","Designed secure image-build execution on AKS-hosted agents using rootless BuildKit."],"Harness":["Designed environment-specific Azure infrastructure workflows through Harness.","Configured AKS networking, Private Endpoints, VNet routing, NSGs and Private DNS through controlled delivery processes.","Coordinated infrastructure configuration with identity, security and production-readiness requirements."],"Azure Monitor":["Implemented centralized Azure monitoring using Azure Monitor and Log Analytics.","Developed operational metrics, dashboards, logs and alerting for cloud workloads.","Used observability data to accelerate incident detection and root-cause analysis."],"Python":["Automated Git and release-management activities with Python and Azure DevOps.","Reduced repetitive version-control and deployment operations through scripted workflows.","Applied Python automation to standardize release steps and operational checks."],"CloudWatch":["Implemented AWS infrastructure and application monitoring with CloudWatch and Datadog.","Configured log, metric and alerting workflows to accelerate incident detection.","Correlated infrastructure telemetry with application symptoms during production RCA."],"Key Vault":["Integrated Azure Key Vault with AKS-hosted applications for managed secret access.","Engineered managed/workload identity and least-privilege permissions for service connectivity.","Designed private endpoint and DNS connectivity for secure Azure PaaS integration."],"ACR":["Integrated Azure Container Registry into Azure DevOps build and release pipelines.","Configured container image delivery from approved registries to AKS workloads.","Engineered registry access and secure build patterns for self-hosted Azure DevOps agents."],"Service Bus":["Integrated Azure Service Bus with the enterprise messaging platform across four environments.","Designed connectivity and identity controls for AKS microservices accessing messaging services.","Proposed KEDA event-driven scaling based on queue depth while implementing CPU/memory HPA."],"PowerShell":["Automated repeatable Windows and Azure administration tasks using PowerShell scripting patterns.","Built command-line validation checks for configuration, connectivity and deployment readiness.","Used structured script output and error handling to support operational troubleshooting."],"Bash":["Used Bash and Linux command-line tooling to investigate DNS, networking, NGINX and service failures.","Automated repeatable server administration and troubleshooting steps.","Integrated shell-based diagnostics into production support and CI/CD investigation workflows."],"VPC":["Designed and supported AWS network connectivity for EKS-hosted cloud workloads.","Applied subnet, routing and security-boundary considerations to infrastructure provisioning.","Troubleshot network reachability and service connectivity across cloud-native applications."],"RDS":["Designed multi-region disaster recovery using RDS read replicas as part of the recovery architecture.","Validated database recovery dependencies alongside Route 53 failover and S3 replication.","Reduced application failover time from hours to under 60 minutes through DR design and validation."],"S3":["Implemented S3 cross-region replication for disaster recovery across AWS regions.","Integrated replicated object storage into the broader Route 53 and RDS failover design.","Validated recovery workflows to improve application continuity during regional disruptions."],"Lambda":["Automated Linux patching and infrastructure maintenance using AWS Lambda and Step Functions.","Orchestrated repeatable operational tasks to reduce manual intervention across AWS environments.","Improved consistency of maintenance workflows through event-driven AWS automation."],"Prometheus":["Defined Kubernetes-oriented monitoring signals such as CPU, memory, pod health and service availability.","Applied time-series metrics to diagnose scaling behavior and application performance.","Connected monitoring signals with dashboard and alerting workflows for faster incident investigation."],"Grafana":["Designed operational dashboard views around service health, resource utilization and failure indicators.","Used metrics visualization to support Kubernetes and cloud infrastructure troubleshooting.","Organized alert thresholds and dashboard signals for incident triage and production readiness."],"CloudFormation":["Structured AWS infrastructure definitions using CloudFormation concepts for repeatable cloud resource provisioning.","Mapped network, compute and security dependencies into version-controlled infrastructure templates.","Applied stack validation and change-review practices to reduce deployment drift across environments.","Aligned CloudFormation-based provisioning with existing AWS infrastructure automation and CI/CD standards."],"ARM":["Used Azure Resource Manager deployment patterns to standardize Azure resource configuration across environments.","Organized resource dependencies, parameters and access controls for repeatable Azure deployments.","Applied deployment validation and configuration review to Azure infrastructure changes."],"Bicep":["Modeled Azure infrastructure declaratively with Bicep modules and environment-specific parameters.","Defined resource dependencies, identity and networking configuration for repeatable Azure deployments.","Applied template validation and controlled deployment practices alongside Azure infrastructure workflows."],"EC2":["Supported AWS compute infrastructure as part of cloud application and Linux operations.","Automated Linux maintenance tasks and repeatable operational workflows across AWS environments.","Troubleshot host-level connectivity, application services and operating-system issues in production."],"CosmosDB":["Integrated Azure Cosmos DB into the enterprise messaging platform alongside AKS, Key Vault and Service Bus.","Designed private connectivity, DNS resolution and identity-based access for Azure PaaS dependencies.","Coordinated production-readiness validation for application connectivity to managed Azure services."],"ELK":["Applied centralized log collection and search practices to troubleshoot application and infrastructure incidents.","Correlated service logs with deployment events and infrastructure symptoms during root-cause analysis.","Organized log views and operational queries to support repeatable production diagnostics."],"GitLab CI":["Structured GitLab CI/CD workflows around build, validation and deployment stages.","Applied branch-based controls, reusable variables and environment separation to release automation.","Used pipeline logs and artifact validation to diagnose failed builds and deployment steps."]};
+const skillModal=document.getElementById('skill-modal');
+const skillDialog=skillModal.querySelector('.skill-dialog');
+let lastSkillTrigger=null;
+function closeCapability(){skillModal.classList.remove('open');skillModal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');if(lastSkillTrigger)lastSkillTrigger.focus();}
+document.querySelectorAll('.skill-trigger').forEach(button=>button.addEventListener('click',()=>{
+ lastSkillTrigger=button;const skill=button.dataset.skill;
+ document.getElementById('skill-dialog-title').textContent=skill;
+ const points=capabilityNotes[skill]||["Designed and maintained repeatable infrastructure and deployment workflows.","Integrated configuration validation into cloud engineering delivery.","Troubleshot operational issues and improved deployment consistency."];
+ const ol=document.getElementById('skill-points');ol.replaceChildren();points.forEach(point=>{const li=document.createElement('li');li.textContent=point;ol.appendChild(li)});
+ skillModal.classList.add('open');skillModal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');skillDialog.focus();
+}));
+skillModal.querySelector('.dialog-close').addEventListener('click',closeCapability);
+skillModal.querySelector('.skill-modal-backdrop').addEventListener('click',closeCapability);
+document.addEventListener('keydown',e=>{if(!skillModal.classList.contains('open'))return;if(e.key==='Escape')closeCapability();if(e.key==='Tab'){const nodes=[...skillModal.querySelectorAll('button')];if(e.shiftKey&&document.activeElement===nodes[0]){e.preventDefault();nodes[nodes.length-1].focus()}else if(!e.shiftKey&&document.activeElement===nodes[nodes.length-1]){e.preventDefault();nodes[0].focus()}}});
+// Cinematic canvas: live-looking synthetic log traffic, tracer lines and signal sweeps.
+const cinema=document.getElementById('ops-cinema');const cinemaCtx=cinema.getContext('2d');
+let cw=0,ch=0,cinemaRatio=1,cinemaTick=0,logStreams=[];
+const logEvents=[
+ '[OK] k8s/node-03   Ready      10.4.2.18',
+ '[INFO] ssh handshake verified · cipher aes256',
+ 'PING edge-gw  64 bytes ttl=58 time=12.4 ms',
+ '[TRACE] eth0 -> ingress -> service -> pod',
+ '[PASS] terraform validate · configuration valid',
+ '[INFO] TLS 1.3 handshake · cert chain verified',
+ '[SYNC] git/main -> build -> scan -> deploy',
+ '[OK] dns lookup api.internal 10.14.0.8',
+ '[INFO] kubectl rollout status deployment/web',
+ '[PASS] readiness probe HTTP/200 38ms',
+ '[INFO] containerd  task running · pid 2208',
+ '[TRACE] route 10.2.0.0/16 via vnet-gateway',
+ '[OK] secrets reference resolved via identity',
+ '[METRIC] cpu=31% mem=58% latency=24ms',
+ '[INFO] helm release status: deployed',
+ '[OK] systemd network-online.target active',
+ '[SCAN] image policy: no blocking findings',
+ '[INFO] azure/aks health: nominal',
+ '[TRACE] tcp SYN -> SYN/ACK -> ACK',
+ '[PASS] endpoint /healthz 200 OK'
+];
+function cinemaResize(){cinemaRatio=Math.min(devicePixelRatio||1,1.5);cw=innerWidth;ch=innerHeight;cinema.width=Math.floor(cw*cinemaRatio);cinema.height=Math.floor(ch*cinemaRatio);cinemaCtx.setTransform(cinemaRatio,0,0,cinemaRatio,0,0);logStreams=Array.from({length:Math.max(3,Math.floor(cw/360))},(_,i)=>({x:Math.round((i+.1)*cw/Math.max(3,Math.floor(cw/360))),y:Math.random()*ch,velocity:.28+Math.random()*.45,lines:Array.from({length:22},()=>logEvents[Math.floor(Math.random()*logEvents.length)]),phase:Math.random()*6.28}));}
+cinemaResize();window.addEventListener('resize',cinemaResize,{passive:true});
+let lastCinema=0;
+function renderCinema(t){requestAnimationFrame(renderCinema);if(document.hidden||document.body.classList.contains('motion-off')||matchMedia('(prefers-reduced-motion: reduce)').matches)return;if(t-lastCinema<45)return;lastCinema=t;cinemaTick++;
+ cinemaCtx.clearRect(0,0,cw,ch);
+ const beamX=((cinemaTick*1.2)%(cw+360))-180;const beam=cinemaCtx.createLinearGradient(beamX-130,0,beamX+130,0);beam.addColorStop(0,'rgba(10,255,180,0)');beam.addColorStop(.5,'rgba(10,255,180,.038)');beam.addColorStop(1,'rgba(10,255,180,0)');cinemaCtx.fillStyle=beam;cinemaCtx.fillRect(beamX-130,0,260,ch);
+ cinemaCtx.save();cinemaCtx.font='11px Consolas,monospace';
+ logStreams.forEach((stream,i)=>{stream.y+=stream.velocity;const lineHeight=22; if(stream.y>ch+lineHeight*2){stream.y=-lineHeight*5;stream.lines.push(logEvents[Math.floor(Math.random()*logEvents.length)]);stream.lines.shift()}
+ const fade=cinemaCtx.createLinearGradient(stream.x-20,0,stream.x+300,0);fade.addColorStop(0,'rgba(35,255,169,.04)');fade.addColorStop(.3,'rgba(76,255,192,.51)');fade.addColorStop(1,'rgba(47,234,176,.11)');cinemaCtx.fillStyle=fade;
+ for(let j=0;j<stream.lines.length;j++){const y=stream.y+(j-10)*lineHeight;if(y<0||y>ch)continue;cinemaCtx.fillText(stream.lines[j],stream.x,y)}
+ const x=stream.x+95+Math.sin(cinemaTick*.014+stream.phase)*65;cinemaCtx.strokeStyle='rgba(61,255,189,.10)';cinemaCtx.beginPath();cinemaCtx.moveTo(x,0);cinemaCtx.lineTo(x,ch);cinemaCtx.stroke();
+ });
+ cinemaCtx.restore();
+ // glowing network constellation: cinematic abstraction of cloud connectivity
+ const hubX=cw*.76,hubY=ch*.47,rad=Math.min(cw,ch)*.29;
+ cinemaCtx.save();
+ for(let r=0;r<3;r++){cinemaCtx.beginPath();cinemaCtx.arc(hubX,hubY,rad*(.52+r*.27),0,Math.PI*2);cinemaCtx.strokeStyle=`rgba(52,255,188,${.085-r*.018})`;cinemaCtx.lineWidth=1;cinemaCtx.setLineDash(r===1?[4,9]:[]);cinemaCtx.stroke();}
+ cinemaCtx.setLineDash([]);
+ const sweepAngle=cinemaTick*.018;
+ const sweep=cinemaCtx.createRadialGradient(hubX,hubY,10,hubX,hubY,rad*1.1);
+ sweep.addColorStop(0,'rgba(39,240,192,.12)');sweep.addColorStop(1,'rgba(39,240,192,0)');
+ cinemaCtx.beginPath();cinemaCtx.moveTo(hubX,hubY);cinemaCtx.arc(hubX,hubY,rad*1.1,sweepAngle-.32,sweepAngle);cinemaCtx.closePath();cinemaCtx.fillStyle=sweep;cinemaCtx.fill();
+ const nodes=Array.from({length:13},(_,i)=>{const a=i*2.39996+.12;const rr=rad*(.34+(i%5)*.155);return [hubX+Math.cos(a)*rr,hubY+Math.sin(a)*rr]});
+ nodes.forEach(([x,y],i)=>{const [nx,ny]=nodes[(i+5)%nodes.length];cinemaCtx.beginPath();cinemaCtx.moveTo(x,y);cinemaCtx.lineTo(nx,ny);cinemaCtx.strokeStyle='rgba(44,219,187,.10)';cinemaCtx.lineWidth=.8;cinemaCtx.stroke();const pulse=(Math.sin(cinemaTick*.06+i*1.7)+1)/2;cinemaCtx.beginPath();cinemaCtx.arc(x,y,1.8+pulse*1.8,0,Math.PI*2);cinemaCtx.fillStyle=`rgba(99,255,213,${.35+pulse*.42})`;cinemaCtx.shadowColor='#4fffd0';cinemaCtx.shadowBlur=12;cinemaCtx.fill();cinemaCtx.shadowBlur=0;
+ const progress=(cinemaTick*.007+i*.13)%1;cinemaCtx.beginPath();cinemaCtx.arc(x+(nx-x)*progress,y+(ny-y)*progress,1.4,0,Math.PI*2);cinemaCtx.fillStyle='rgba(160,255,236,.75)';cinemaCtx.fill();});
+ cinemaCtx.font='10px Consolas,monospace';cinemaCtx.fillStyle='rgba(83,241,200,.42)';cinemaCtx.fillText('CLOUD // NETWORK TOPOLOGY',hubX-rad*.85,hubY-rad*1.12);
+ cinemaCtx.restore();
+ // moving packet paths: abstract telemetry, no external connections
+ for(let k=0;k<6;k++){const y=(k+1)*ch/7;const x=((cinemaTick*(1.2+k*.16)+k*173)%(cw+100))-50;cinemaCtx.strokeStyle='rgba(53,240,196,.12)';cinemaCtx.beginPath();cinemaCtx.moveTo(x-55,y);cinemaCtx.lineTo(x,y);cinemaCtx.stroke();cinemaCtx.fillStyle='rgba(125,255,212,.50)';cinemaCtx.fillRect(x-2,y-2,4,4)}
+}
+requestAnimationFrame(renderCinema);
 </script>
-<!-- Trigger GitHub Pages republish -->
+
+
 </body>
 
 </html>
