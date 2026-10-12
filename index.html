@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Narendranadh Perni — DevOps / Cloud Engineer</title>
+<meta name="description" content="Narendranadh Perni — DevOps / Cloud Engineer. Terraform, Kubernetes, AWS, Azure, CI/CD.">
+<style>
+:root{
+  --bg:#0a0e14; --bg2:#0f1520; --card:#111927; --border:#1e2a3d;
+  --text:#e6edf3; --muted:#8b98a9; --accent:#38bdf8; --accent2:#22d3ee;
+  --green:#3fb950; --purple:#a371f7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.6;overflow-x:hidden}
+::selection{background:rgba(56,189,248,.3)}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent2)}
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,14,20,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:Consolas,monospace;font-weight:700;font-size:1.05rem;color:var(--text)}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:var(--muted);font-size:.92rem;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+@media(max-width:720px){.nav-links{display:none}}
+/* ---------- hero ---------- */
+header{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:120px 24px 60px;
+  background:radial-gradient(ellipse 80% 55% at 70% 20%,rgba(56,189,248,.09),transparent),
+             radial-gradient(ellipse 60% 45% at 20% 80%,rgba(163,113,247,.07),transparent)}
+.hero{max-width:900px;text-align:left}
+.hero .tag{font-family:Consolas,monospace;color:var(--green);font-size:.95rem;margin-bottom:14px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.1;font-weight:800;letter-spacing:-1px}
+.hero h1 .hl{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.typed{font-family:Consolas,monospace;color:var(--accent);font-size:clamp(1rem,2.4vw,1.35rem);margin:18px 0 8px;min-height:2.2em}
+.typed .caret{display:inline-block;width:9px;height:1.15em;background:var(--accent);vertical-align:text-bottom;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.sub{color:var(--muted);max-width:640px;font-size:1.05rem;margin-bottom:32px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 28px;border-radius:8px;font-weight:600;font-size:.95rem;transition:transform .15s,box-shadow .15s}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#04121f}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(56,189,248,.35);color:#04121f}
+.btn-ghost{border:1px solid var(--border);color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.stats{display:flex;gap:36px;margin-top:56px;flex-wrap:wrap}
+.stat .n{font-size:1.9rem;font-weight:800;color:var(--accent)}
+.stat .l{color:var(--muted);font-size:.85rem}
+/* ---------- sections ---------- */
+section{max-width:1100px;margin:0 auto;padding:90px 24px}
+.sec-head{margin-bottom:44px}
+.sec-head .kicker{font-family:Consolas,monospace;color:var(--green);font-size:.85rem;letter-spacing:2px;text-transform:uppercase}
+.sec-head h2{font-size:2rem;margin-top:8px;letter-spacing:-.5px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:rgba(56,189,248,.4)}
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:720px){.about-grid{grid-template-columns:1fr}}
+.about-grid p{color:var(--muted)}
+.about-grid strong{color:var(--text)}
+/* ---------- skills ---------- */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.skill-cat h3{font-size:1.05rem;margin-bottom:14px;color:var(--accent);font-family:Consolas,monospace}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag2{background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.25);color:#bfe9ff;padding:6px 13px;border-radius:20px;font-size:.83rem;font-family:Consolas,monospace}
+/* ---------- timeline ---------- */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--purple))}
+.t-item{position:relative;margin-bottom:34px}
+.t-item::before{content:'';position:absolute;left:-26px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(56,189,248,.15)}
+.t-item .role{font-size:1.15rem;font-weight:700}
+.t-item .co{color:var(--accent);font-weight:600}
+.t-item .when{font-family:Consolas,monospace;color:var(--muted);font-size:.82rem;margin:4px 0 10px}
+.t-item ul{color:var(--muted);padding-left:18px;font-size:.94rem}
+.t-item li{margin-bottom:6px}
+/* ---------- projects ---------- */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.proj{display:flex;flex-direction:column}
+.proj .p-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.proj .p-icon{font-size:1.4rem}
+.proj h3{font-size:1.05rem}
+.proj h3 a{color:var(--text)}
+.proj h3 a:hover{color:var(--accent)}
+.proj p{color:var(--muted);font-size:.9rem;flex:1;margin:8px 0 14px}
+.proj .p-tags{display:flex;flex-wrap:wrap;gap:6px}
+.proj .p-tags span{font-family:Consolas,monospace;font-size:.72rem;color:var(--accent2);background:rgba(34,211,238,.07);padding:3px 9px;border-radius:12px}
+/* ---------- certs / edu ---------- */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:720px){.two-col{grid-template-columns:1fr}}
+.cert{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+.cert:last-child{margin-bottom:0}
+.cert .badge{font-size:1.6rem;flex-shrink:0}
+.cert b{display:block}
+.cert small{color:var(--muted)}
+.edu-item{margin-bottom:18px}
+.edu-item:last-child{margin-bottom:0}
+.edu-item b{display:block}
+.edu-item small{color:var(--muted)}
+/* ---------- contact ---------- */
+.contact-box{text-align:center;padding:60px 28px}
+.contact-box h2{font-size:2rem;margin-bottom:12px}
+.contact-box p{color:var(--muted);max-width:520px;margin:0 auto 30px}
+.contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--border);text-align:center;padding:28px;color:var(--muted);font-size:.85rem;font-family:Consolas,monospace}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">naren<span>.devops</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <div class="tag">$ whoami</div>
+    <h1>Narendranadh Perni<br><span class="hl">DevOps / Cloud Engineer</span></h1>
+    <div class="typed"><span id="typed-text"></span><span class="caret"></span></div>
+    <p class="sub">Around 6 years building and running cloud platforms across AWS and Azure — Terraform, Kubernetes, and CI/CD from provisioning to production. Currently engineering Azure messaging platforms at Walgreens.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#projects">View my work</a>
+      <a class="btn btn-ghost" href="https://github.com/NarenPerni007" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/narendranadh-perni-2994b8294" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">6</div><div class="l">years experience</div></div>
+      <div class="stat"><div class="n">10</div><div class="l">open-source repos</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">certifications</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">cloud platforms</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="sec-head reveal">
+    <div class="kicker">// about</div>
+    <h2>Engineer who ships reliable platforms</h2>
+  </div>
+  <div class="about-grid">
+    <div class="card reveal">
+      <p>I'm a <strong>DevOps / Cloud Engineer</strong> based in <strong>Cary, NC</strong>, working across <strong>AWS and Azure</strong> with Terraform, Kubernetes, and CI/CD tooling — from provisioning platforms to shipping reliable releases.</p>
+      <br>
+      <p>Currently at <strong>Walgreens</strong>, where I architected the Azure cloud platform for enterprise messaging services across DEV, UAT, PERF and PROD — AKS, networking, Private Endpoints, identity, and end-to-end CI/CD.</p>
+    </div>
+    <div class="card reveal">
+      <p>Previously a <strong>Cloud Operations Engineer (contractor) at Railinc</strong>, running GitOps-driven CI/CD on Amazon EKS, building reusable Terraform modules, and serving as the <strong>Datadog SME</strong> — cutting incident resolution time by 40%.</p>
+      <br>
+      <p>I hold the <strong>CKA</strong> and <strong>Microsoft Certified: DevOps Engineer Expert</strong> certifications, and I document everything I build — <strong>runbooks, architecture guides, and reusable templates</strong> included.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="sec-head reveal">
+    <div class="kicker">// toolbox</div>
+    <h2>Skills</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="card skill-cat reveal">
+      <h3>☁️ Cloud</h3>
+      <div class="tags"><span class="tag2">AWS</span><span class="tag2">Azure</span><span class="tag2">EC2</span><span class="tag2">EKS</span><span class="tag2">AKS</span><span class="tag2">S3</span><span class="tag2">RDS</span><span class="tag2">Lambda</span><span class="tag2">VPC</span><span class="tag2">CosmosDB</span><span class="tag2">Service Bus</span><span class="tag2">Key Vault</span><span class="tag2">ACR</span></div>
+    </div>
+    <div class="card skill-cat reveal">
+      <h3>🏗️ Infrastructure as Code</h3>
+      <div class="tags"><span class="tag2">Terraform</span><span class="tag2">CloudFormation</span><span class="tag2">Pulumi</span><span class="tag2">ARM</span><span class="tag2">Bicep</span></div>
+    </div>
+    <div class="card skill-cat reveal">
+      <h3>📦 Containers & Orchestration</h3>
+      <div class="tags"><span class="tag2">Docker</span><span class="tag2">Kubernetes</span><span class="tag2">Helm</span><span class="tag2">EKS</span><span class="tag2">AKS</span></div>
+    </div>
+    <div class="card skill-cat reveal">
+      <h3>🔄 CI/CD</h3>
+      <div class="tags"><span class="tag2">Jenkins</span><span class="tag2">GitHub Actions</span><span class="tag2">Azure DevOps</span><span class="tag2">GitLab CI</span><span class="tag2">Argo CD</span><span class="tag2">Harness</span></div>
+    </div>
+    <div class="card skill-cat reveal">
+      <h3>⚙️ Automation & Scripting</h3>
+      <div class="tags"><span class="tag2">Python</span><span class="tag2">Bash</span><span class="tag2">PowerShell</span><span class="tag2">Ansible</span></div>
+    </div>
+    <div class="card skill-cat reveal">
+      <h3>📊 Observability</h3>
+      <div class="tags"><span class="tag2">Dynatrace</span><span class="tag2">Datadog</span><span class="tag2">Prometheus</span><span class="tag2">Grafana</span><span class="tag2">ELK</span><span class="tag2">CloudWatch</span><span class="tag2">Azure Monitor</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="sec-head reveal">
+    <div class="kicker">// journey</div>
+    <h2>Experience</h2>
+  </div>
+  <div class="timeline">
+    <div class="t-item reveal">
+      <div class="role">DevOps Engineer</div>
+      <div class="co">Walgreens · Deerfield, IL</div>
+      <div class="when">May 2026 — Present</div>
+      <ul>
+        <li>Architected the Azure cloud platform for enterprise messaging services across DEV, UAT, PERF and PROD — production-ready AKS with ACR, Key Vault, Cosmos DB and Service Bus.</li>
+        <li>Designed IaC and environment configs via Harness: AKS networking, Private Endpoints, VNet routing, NSGs, Private DNS and identity.</li>
+        <li>Engineered Kubernetes/Helm deployment standards — probes, resource limits, autoscaling, environment-specific values.</li>
+        <li>Built end-to-end CI/CD for messaging microservices with Azure DevOps, Gradle, Docker, ACR and Helm.</li>
+        <li>Onboarded AKS clusters to Dynatrace (OneAgent) with custom dashboards for cluster and app health.</li>
+        <li>Serve as Lead Infrastructure SME across Azure, AKS, networking, CI/CD, security and observability.</li>
+      </ul>
+    </div>
+    <div class="t-item reveal">
+      <div class="role">Cloud Operations Engineer <span style="color:var(--muted);font-weight:400;font-size:.85rem">(Contractor)</span></div>
+      <div class="co">Railinc · Cary, NC</div>
+      <div class="when">Oct 2022 — Apr 2026</div>
+      <ul>
+        <li>Ran GitOps-driven CI/CD with Argo CD, Jenkins, Terraform and Kubernetes across Amazon EKS — zero-downtime releases.</li>
+        <li>Built reusable Terraform modules standardizing IaC across environments.</li>
+        <li>Administered secure multi-tenant EKS clusters: RBAC, network policies, IAM integration.</li>
+        <li>Automated Linux patching with AWS Lambda + Step Functions.</li>
+        <li>Designed multi-region DR (Route 53 failover, RDS replicas, S3 CRR) — failover from hours to under 60 minutes.</li>
+        <li>Datadog SME: custom dashboards, proactive alerting, runbooks — incident resolution time down 40%.</li>
+      </ul>
+    </div>
+    <div class="t-item reveal">
+      <div class="role">DevOps Engineer</div>
+      <div class="co">Wind Steller · Hyderabad, India</div>
+      <div class="when">May 2019 — Dec 2020</div>
+      <ul>
+        <li>Built reusable Terraform modules with remote state for Azure across DEV, UAT and PROD.</li>
+        <li>Managed AKS workloads with Helm — rolling deployments, probes, autoscaling.</li>
+        <li>Architected Azure Landing Zones: VNets, NSGs, routing, RBAC, ExpressRoute/VPN hybrid connectivity.</li>
+        <li>Engineered CI/CD with GitHub Actions, Git and Ansible; centralized observability with Azure Monitor.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="sec-head reveal">
+    <div class="kicker">// selected work</div>
+    <h2>Projects</h2>
+  </div>
+  <div class="proj-grid">
+    <div class="card proj reveal">
+      <div class="p-top"><span class="p-icon">🏗️</span><a href="https://github.com/NarenPerni007/terraform-aws-eks" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <h3><a href="https://github.com/NarenPerni007/terraform-aws-eks" target="_blank" rel="noopener">terraform-aws-eks</a></h3>
+      <p>Production-style Terraform for AWS VPC + EKS: managed node groups, private nodes, per-AZ NAT gateways.</p>
+      <div class="p-tags"><span>Terraform</span><span>AWS</span><span>EKS</span><span>Kubernetes</span></div>
+    </div>
+    <div class="card proj reveal">
+      <div class="p-top"><span class="p-icon">🏗️</span><a href="https://github.com/NarenPerni007/terraform-azure-aks" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <h3><a href="https://github.com/NarenPerni007/terraform-azure-aks" target="_blank" rel="noopener">terraform-azure-aks</a></h3>
+      <p>Terraform for Azure AKS from scratch: VNet, autoscaling node pools, managed identity, workload identity.</p>
+      <div class="p-tags"><span>Terraform</span><span>Azure</span><span>AKS</span><span>Kubernetes</span></div>
+    </div>
+    <div class="card proj reveal">
+      <div class="p-top"><span class="p-icon">⎈</span><a href="https://github.com/NarenPerni007/webapp-helm-chart" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <h3><a href="https://github.com/NarenPerni007/webapp-helm-chart" target="_blank" rel="noopener">webapp-helm-chart</a></h3>
+      <p>Hardened Helm chart: HPA, PodDisruptionBudgets, liveness/readiness probes, ingress TLS, non-root containers.</p>
+      <div class="p-tags"><span>Helm</span><span>Kubernetes</span><span>DevOps</span></div>
+    </div>
+    <div class="card proj reveal">
+      <div class="p-top"><span class="p-icon">🔄</span><a href="https://github.com/NarenPerni007/azure-devops-pipeline-templates" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <h3><a href="https://github.com/NarenPerni007/azure-devops-pipeline-templates" target="_blank" rel="noopener">azure-devops-pipeline-templates</a></h3>
+      <p>Azure DevOps multi-stage pipelines: ACR builds with Trivy scanning, Helm deploys to AKS, Dynatrace deployment events.</p>
+      <div class="p-tags"><span>Azure DevOps</span><span>CI/CD</span><span>AKS</span><span>Dynatrace</span></div>
+    </div>
+    <div class="card proj reveal">
+      <div class="p-top"><span class="p-icon">🔄</span><a href="https://github.com/NarenPerni007/cicd-pipeline-templates" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <h3><a href="https://github.com/NarenPerni007/cicd-pipeline-templates" target="_blank" rel="noopener">cicd-pipeline-templates</a></h3>
+      <p>Reusable GitHub Actions: Terraform plan/apply via OIDC, Docker build + scan + push, Kubernetes rollouts.</p>
+      <div class="p-tags"><span>GitHub Actions</span><span>Terraform</span><span>Docker</span></div>
+    </div>
+    <div class="card proj reveal">
+      <div class="p-top"><span class="p-icon">🤖</span><a href="https://github.com/NarenPerni007/ansible-playbooks" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <h3><a href="https://github.com/NarenPerni007/ansible-playbooks" target="_blank" rel="noopener">ansible-playbooks</a></h3>
+      <p>Reusable Ansible roles for server setup: sshd/sysctl hardening, fail2ban, Docker, nginx reverse proxy.</p>
+      <div class="p-tags"><span>Ansible</span><span>Linux</span><span>Automation</span></div>
+    </div>
+    <div class="card proj reveal">
+      <div class="p-top"><span class="p-icon">🐍</span><a href="https://github.com/NarenPerni007/python-cloud-automation" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <h3><a href="https://github.com/NarenPerni007/python-cloud-automation" target="_blank" rel="noopener">python-cloud-automation</a></h3>
+      <p>boto3 scripts for AWS hygiene: EC2 scheduler, EBS/RDS snapshot cleanup, S3 inventory reports.</p>
+      <div class="p-tags"><span>Python</span><span>AWS</span><span>boto3</span></div>
+    </div>
+    <div class="card proj reveal">
+      <div class="p-top"><span class="p-icon">💻</span><a href="https://github.com/NarenPerni007/linux-admin-toolkit" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <h3><a href="https://github.com/NarenPerni007/linux-admin-toolkit" target="_blank" rel="noopener">linux-admin-toolkit</a></h3>
+      <p>Bash toolkit for day-to-day Linux admin: disk alerts, health checks, log archival, patch checks, S3 backups.</p>
+      <div class="p-tags"><span>Bash</span><span>Linux</span><span>SysAdmin</span></div>
+    </div>
+    <div class="card proj reveal">
+      <div class="p-top"><span class="p-icon">📊</span><a href="https://github.com/NarenPerni007/monitoring-dashboards" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <h3><a href="https://github.com/NarenPerni007/monitoring-dashboards" target="_blank" rel="noopener">monitoring-dashboards</a></h3>
+      <p>Prometheus alert rules, Grafana dashboards, Alertmanager routing — plus production runbooks.</p>
+      <div class="p-tags"><span>Prometheus</span><span>Grafana</span><span>Observability</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="sec-head reveal">
+    <div class="kicker">// credentials</div>
+    <h2>Certifications & Education</h2>
+  </div>
+  <div class="two-col">
+    <div class="card reveal">
+      <div class="cert"><span class="badge">☸️</span><div><b>Certified Kubernetes Administrator (CKA)</b><small>Cloud Native Computing Foundation</small></div></div>
+      <div class="cert"><span class="badge">🔷</span><div><b>Microsoft Certified: DevOps Engineer Expert</b><small>Microsoft</small></div></div>
+      <div class="cert"><span class="badge">🔷</span><div><b>Microsoft Certified: Azure Administrator Associate</b><small>Microsoft</small></div></div>
+      <div class="cert"><span class="badge">🔷</span><div><b>AZ-400: Designing and Implementing Microsoft DevOps Solutions</b><small>Microsoft</small></div></div>
+    </div>
+    <div class="card reveal">
+      <div class="edu-item"><b>🎓 M.S. Computer Science</b><small>University of Missouri – Kansas City · Jan 2021 — Aug 2022</small></div>
+      <div class="edu-item"><b>🎓 B.Tech Mechanical Engineering</b><small>Acharya Nagarjuna University, India · Aug 2014 — May 2017</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card contact-box reveal">
+    <div class="kicker" style="font-family:Consolas,monospace;color:var(--green);font-size:.85rem;letter-spacing:2px;text-transform:uppercase">// contact</div>
+    <h2>Let's build something reliable</h2>
+    <p>Open to full-time DevOps / SRE / Platform / Cloud Engineering roles — remote preferred. Currently based in Cary, NC.</p>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:narendranadhp20@gmail.com">Email me</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/narendranadh-perni-2994b8294" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn btn-ghost" href="https://github.com/NarenPerni007" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Narendranadh Perni · built with Terraform-grade attention to detail
+</footer>
+
+<script>
+// typed effect
+const phrases=[
+  "$ terraform apply — infrastructure as code",
+  "$ kubectl get pods — all green",
+  "$ az pipelines run — build passing",
+  "$ helm upgrade --install — deployed"
+];
+const el=document.getElementById('typed-text');
+let pi=0,ci=0,deleting=false;
+function tick(){
+  const p=phrases[pi];
+  el.textContent=p.slice(0,ci);
+  if(!deleting&&ci<p.length){ci++;setTimeout(tick,45);}
+  else if(!deleting){deleting=true;setTimeout(tick,1600);}
+  else if(ci>0){ci--;setTimeout(tick,22);}
+  else{deleting=false;pi=(pi+1)%phrases.length;setTimeout(tick,400);}
+}
+tick();
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(n=>io.observe(n));
+</script>
+</body>
+</html>
